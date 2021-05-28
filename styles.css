@@ -44,7 +44,7 @@ main{
 }
 
 #geolocation{
-    width: 8vw;
+    width: 10vw;
     height: 2em;
     margin-left: 10px;
     background-color: transparent;
@@ -104,6 +104,68 @@ main{
 .button:hover{
     transform: scale(1.1);
     transition: transform 400ms ease-in-out;
+    font-size: 1.5em;
     cursor: pointer;
 }
 /***button***/
+
+
+/***Operation***/
+#operation{
+    width: 100%;
+    text-align: center;
+}
+
+.operation_title{
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.framing_operation{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.number{
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0;
+    margin-top: 27px;
+    margin-right: -0.5em;
+    width: 30px;
+    height: 30px;
+    background-color: #9356dc;
+    color: white;
+    z-index: 1;
+}
+
+p{
+    margin: 3px 0px 0px 0px;
+}
+
+.choice{
+    display: flex;
+    border-radius: 1em;
+    align-items: center;
+    width: 20vw;
+    height: 60px;
+    padding: 10px 10px 10px 40px;
+    margin-right: 3em;
+    background-color: #eaeaea;
+    box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
+    cursor: pointer;
+}
+
+h3{
+    font-size: 1.4em;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+}
+
+.choice:hover{
+    background-color: #e4d5f6;
+}
+/***Operation***/

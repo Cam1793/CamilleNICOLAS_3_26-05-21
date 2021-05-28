@@ -26,7 +26,9 @@ main{
     width: 100%;
     text-align: center;
     padding: 20px 0px 20px 0px;
+
     box-shadow: 0px 4px 10px 4px rgb(89 89 89 / 20%);
+
 }
 
 /***barre de recherche**/

@@ -1,5 +1,5 @@
 body{
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 13px;
     font-weight: normal;
     margin: 0px;
@@ -26,23 +26,26 @@ main{
     width: 100%;
     text-align: center;
     padding: 20px 0px 20px 0px;
-    box-shadow: 0px 4px 10px 2px rgb(89 89 89 / 64%);
+
+    box-shadow: 0px 4px 10px 4px rgb(89 89 89 / 20%);
+
 }
 
 /***barre de recherche**/
 .search_bar{
     width: 100%;
-    height: auto;
+    height: 2.5em;
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e0e0e0e1;   
+    background-color: #eaeaea;
+    z-index: -1;
 }
 
 #geolocation{
-    width: 10vw;
-    height: 2.5em;
+    width: 8vw;
+    height: 2em;
     margin-left: 10px;
     background-color: transparent;
     border: none;
@@ -50,8 +53,57 @@ main{
 
 :placeholder-shown{
     font-size: 1em;
-    font-weight: bold;
-    color: black;
-    
 }
 /***barre de recherche**/
+
+/***Exploration***/
+#exploration{
+    width: 100%;
+}
+
+.framing_exploration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+}
+
+.site_title{
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introduction{
+    font-size: 1.5em;
+    font-weight: normal;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+/***button***/
+.btn_exploration{
+    text-align: center;
+}
+
+.button{
+    color: white;
+    background: linear-gradient(#FF79DA, #9356DC);
+    border-radius: 2em;
+    border: none;
+    font-size: 1.5em;
+    width: 250px;
+    height: 60px;
+    display: inline-block;
+    box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    transition: transform 400ms ease-in-out;
+    cursor: pointer;
+}
+/***button***/

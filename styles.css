@@ -40,7 +40,6 @@ main{
     justify-content: center;
     background-color: #eaeaea;
     z-index: -1;
-    cursor: pointer;
 }
 
 #geolocation{
@@ -49,7 +48,7 @@ main{
     margin-left: 10px;
     background-color: transparent;
     border: none;
-    
+    cursor: pointer;
 }
 
 :placeholder-shown{

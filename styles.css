@@ -1,5 +1,5 @@
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto-Regular", sans-serif;
     font-size: 13px;
     font-weight: normal;
     margin: 0px;
@@ -26,7 +26,6 @@ main{
     width: 100%;
     text-align: center;
     padding: 20px 0px 20px 0px;
-
     box-shadow: 0px 4px 10px 4px rgb(89 89 89 / 20%);
 
 }
@@ -41,6 +40,7 @@ main{
     justify-content: center;
     background-color: #eaeaea;
     z-index: -1;
+    cursor: pointer;
 }
 
 #geolocation{
@@ -49,10 +49,11 @@ main{
     margin-left: 10px;
     background-color: transparent;
     border: none;
+    
 }
 
 :placeholder-shown{
-    font-size: 1em;
+    font-size: 1.1em;
 }
 /***barre de recherche**/
 
@@ -71,8 +72,9 @@ main{
 
 .site_title{
     font-size: 3.5em;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 20px;
+    font-family: "shrikhand regular", sans-serif;
 }
 
 .introduction{
@@ -117,9 +119,11 @@ main{
 }
 
 .operation_title{
-    font-size: 2.2em;
+    font-size: 2.7em;
+    font-weight: normal;
     margin-bottom: 50px;
     margin-top: 40px;
+    font-family: "shrikhand regular", sans-serif;
 }
 
 .framing_operation{
@@ -177,14 +181,15 @@ h3{
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     margin-bottom: 20px;
 }
 
 .restaurants_title{
-    font-size: 2.2em;
+    font-size: 2.7em;
     text-align: center;
     display: flex;
+    font-family: "shrikhand regular", sans-serif;
+    font-weight: normal;
 }
 
 .framing_restaurants{

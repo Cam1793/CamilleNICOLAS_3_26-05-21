@@ -261,3 +261,58 @@ a{
     color: grey;
 }
 /***Restaurants***/
+
+/***Footer***/
+#information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px 0px 20px 0px;
+}
+
+.logo_footer{
+    display: flex;
+    justify-content: center;
+}
+
+.title_footer{
+    color: white;
+    font-family: shrikhand regular, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.footer_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.option{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.option:hover{
+    color: #99e2d0
+}
+
+.fa-utensils{
+    margin-right: 10px;
+}
+
+.fa-hands-helping{
+    margin-right: 10px;
+}
+/***Footer***/

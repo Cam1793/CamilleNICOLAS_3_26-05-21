@@ -93,8 +93,7 @@ body{
 }
 
 .starter{
-    width: 300px;
-    
+    width: 300px; 
 }
 
 .main_dish{
@@ -123,14 +122,14 @@ body{
     font-size: 1.4em;
 }
 
-.starter_name{
+.name_dish{
     display: flex;
     justify-content: space-between;
     padding: 0px 20px 0px 10px;
    align-items: center;
 }
 
-.title_with_dish{
+.name_with_dish{
     margin: 0;
     font-size: 1.3em;
     font-weight: normal;

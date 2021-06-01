@@ -16,7 +16,6 @@ body{
     align-items: center;
 }
 
-
 /****header****/
 
 /***Top-header***/
@@ -74,8 +73,6 @@ body{
     justify-content: center;
     font-size: 30px;
     font-family: "shrikhand regular", sans-serif;
-    margin-bottom: 50px;
-    
 }
 /***Image header***/
 
@@ -108,7 +105,7 @@ body{
 .box{
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 19vw;
     height: 80px;
     box-shadow: 5px 5px 10px #d3d1d1;
     border-radius: 20px;
@@ -146,7 +143,7 @@ body{
 
 /***Boutton Commander***/
 .order{
-    text-align: center;
+    text-align: center; 
     margin-bottom: 50px; 
 }
 

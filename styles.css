@@ -223,6 +223,11 @@ body{
     position: relative;
 }
 
+.cart_restaurant:hover{
+    transform: scale(1.02);
+    transition: transform 200ms ease-in-out;
+}
+
 .cart_img{
     width: 100%;
     border-radius: 15px 15px 0px 0px;

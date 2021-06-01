@@ -3,15 +3,19 @@ body{
     font-size: 13px;
     font-weight: normal;
     margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
 }
 
-main{
+.main{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #f2f2f2;;
 }
+
 
 /****header****/
 
@@ -37,18 +41,15 @@ main{
     cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-}
-
 .back_to_home_page{
-    z-index: -1;
+    position: absolute;
     display: flex;
-    font-size: 2em;
+    font-size: 3em;
     color: black;
     margin-left: 40px;
     margin-top: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .back_to_home_page:hover{
@@ -63,7 +64,7 @@ a{
 }
 
 .picture_header{
-    height: 300px;
+    height: 30em;
     width: 100%;
     object-fit: cover;
 }
@@ -72,6 +73,9 @@ a{
     display: flex;
     justify-content: center;
     font-size: 30px;
+    font-family: "shrikhand regular", sans-serif;
+    margin-bottom: 50px;
+    
 }
 /***Image header***/
 
@@ -141,24 +145,29 @@ a{
 /***Menu***/
 
 /***Boutton Commander***/
+.order{
+    text-align: center;
+    margin-bottom: 50px; 
+}
+
 .button{
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
+    color: #9356DC;
     border-radius: 2em;
-    border: none;
+    border: solid 1px #9356DC;
     font-size: 1.5em;
-    width: 250px;
+    font-weight: 600;
+    width: 270px;
     height: 60px;
-    display: inline-block;
     box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
-    position: relative;
-    margin-bottom: 5em;
+    margin-bottom: 40px;
 }
 
 .button:hover{
-    transform: scale(1.1);
-    transition: transform 400ms ease-in-out;
-    font-size: 1.5em;
+    transform: scale(1.05);
+    transition: transform 200ms ease-in-out;
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
+    color: white;
     cursor: pointer;
 }
 /***Boutton Commander***/
@@ -179,9 +188,14 @@ a{
 
 .title_footer{
     color: white;
-    font-family: shrikhand regular, sans-serif;
+    font-family: "shrikhand regular", sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.title_footer:hover{
+    color: #99e2d0;
 }
 
 .footer_box{
@@ -190,7 +204,7 @@ a{
     margin-bottom: 20px;
 }
 
-ul{
+.option_list{
     width: 100%;
     display: flex;
     justify-content: space-around;

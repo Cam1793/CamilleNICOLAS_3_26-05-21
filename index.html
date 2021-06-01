@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <title>Ohmyfood!</title>
+            <title>Ohmyfood</title>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +11,17 @@
             <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
         </head>
             <body>
-                    <main>
-                        <!--Top Header-->
-                        <header id="top-header">
-                            <div class="logo">
-                                <a href="#"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
-                            </div>
-                            <div class="search_bar">
-                                <i class="fas fa-map-marker-alt" id="icone"></i>
-                                <input type="search" id="geolocation" name="recherche" placeholder="Paris, Belleville">
-                            </div>
-                        </header>
-
+                <!--Top Header-->
+                <header id="top-header">
+                    <div class="logo">
+                        <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
+                    </div>
+                    <div class="search_bar">
+                        <i class="fas fa-map-marker-alt" id="icone"></i>
+                        <input type="search" id="geolocation" name="recherche" placeholder="Paris, Belleville">
+                    </div>
+                </header>
+                    <main id="main">
                         <!--Exploration-->
                         <section id="exploration">
                             <div class="framing_exploration">
@@ -40,35 +39,34 @@
                                 <div class="framing_operation">
                                     <!--div choisissez un restaurant-->
                                     <div class="number">
-                                        <p>1</p>
+                                        <p class="operation_number">1</p>
                                     </div>
                                     <div class="choice">
                                         <i class="fas fa-mobile-alt fa-2x"></i>
-                                        <h3>Choisissez un restaurant</h3>
+                                        <h3 class="operation_div">Choisissez un restaurant</h3>
                                     </div>
                                     <!--div choisissez un restaurant-->
 
                                     <!--div composez votre menu-->
                                     <div class="number">
-                                        <p>2</p>
+                                        <p class="operation_number">2</p>
                                     </div>
                                     <div class="choice">
                                         <i class="fas fa-list fa-2x"></i>
-                                        <h3>Composez votre menu</h3>
+                                        <h3 class="operation_div">Composez votre menu</h3>
                                     </div>
                                     <!--div composez votre menu-->
 
                                     <!--div déguster au restaurant-->
                                     <div class="number">
-                                        <p>3</p>
+                                        <p class="operation_number">3</p>
                                     </div>
                                     <div class="choice">
                                         <i class="fas fa-store fa-2x"></i>
-                                        <h3>Déguster au restaurant</h3>
+                                        <h3 class="operation_div">Déguster au restaurant</h3>
                                     </div>
                                     <!--div déguster au restaurant-->
-                                </div>
-                                
+                                </div>   
                         </aside>
 
                         <!--Restaurants-->
@@ -77,8 +75,8 @@
                                 <div class="framing_restaurants">
                                     <!--la palette du goût-->
                                     <div class="cart_restaurant">
-                                        <a href="menu_la_palette_du_gout.html">
-                                            <h4 class="new">Nouveau</h4>
+                                        <a href="menu_la_palette_du_gout.html" class="resto">
+                                            <span class="new">Nouveau</span>
                                             <img class="cart_img" src="images/cart_img.jpg" alt="La palette du goût">
                                             <div class="card_text">
                                                 <div>
@@ -96,9 +94,9 @@
                                     <!--la palette du goût-->
 
                                     <!--la note enchantée-->
-                                    <a href="menu_la_note_enchantee.html">
+                                    <a href="menu_la_note_enchantee.html" class="resto">
                                         <div class="cart_restaurant">
-                                            <h4 class="new">Nouveau</h4>
+                                            <span class="new">Nouveau</span>
                                             <img class="cart_img_2" src="images/cart_img_2.jpg" alt="La note enchantée">
                                                 <div class="card_text">
                                                     <div>
@@ -115,7 +113,7 @@
                                     <!--la note enchantée-->
 
                                     <!--À la française-->
-                                    <a href="menu_a_la_francaise.html">
+                                    <a href="menu_a_la_francaise.html" class="resto">
                                         <div class="cart_restaurant">
                                             <img class="cart_img" src="images/cart_img_3.jpg" alt="À la française">
                                             <div class="card_text">
@@ -133,7 +131,7 @@
                                     <!--À la française-->
 
                                     <!--Les délices des sens-->
-                                    <a href="menu_le_delice_des_sens.html">
+                                    <a href="menu_le_delice_des_sens.html" class="resto">
                                         <div class="cart_restaurant">
                                             <img class="cart_img" src="images/cart_img_1.jpg" alt="Les délices des sens">
                                             <div class="card_text">
@@ -151,13 +149,14 @@
                                     <!--Les délices des sens-->
                                 </div>
                         </section>
-                        
+                    </main>    
+                        <!--Footer-->
                         <footer id="information">
                             <div class="logo_footer">
-                                <a href="#" class="title_footer">Ohmyfood!</a>
+                                <a href="index.html" class="title_footer">Ohmyfood</a>
                             </div>
                             <div class="footer_box">
-                                <ul>
+                                <ul class="option_list">
                                     <a href="#" class="option"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
                                     <a href="#" class="option"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
                                     <a href="#" class="option">Montion légales</a>
@@ -165,6 +164,5 @@
                                 </ul>
                             </div>
                         </footer>
-                    </main>
             </body>
 </html>

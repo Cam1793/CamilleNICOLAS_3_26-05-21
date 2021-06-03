@@ -57,9 +57,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #eaeaea;
-    z-index: -1;
 
-    #geolocation_input{
+    & input{
         width: 200px;
         height: 2em;
         background-color: transparent;
@@ -68,6 +67,10 @@ body{
         color: $color-primary;
         text-align: center;
         margin-left: 10px;
+
+        &:focus{
+            border: solid 2px #9356DC;
+        }
     }
     
     .fa-map-marker-alt{
@@ -116,18 +119,15 @@ body{
     height: 60px;
     box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
     margin-bottom: 40px;
-
-    .btn_exploration{
-        text-align: center;
-    }
+    transform: scale(1);
+    transition: transform 400ms ease-in-out;
     
-    .button:hover{
-        transform: scale(1.05);
-        transition: transform 200ms ease-in-out;
-        background: linear-gradient($color-secondary, $color-primary);
-        box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
-        color: $color-white ;
-        cursor: pointer;
+    &:hover{
+    transform: scale(1.15);
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
+    color: white;
+    cursor: pointer;
     }
 }
 /***button***/

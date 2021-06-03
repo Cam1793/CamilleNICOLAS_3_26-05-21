@@ -1,7 +1,7 @@
 /**variante color**/
 $color-primary: #9356dc ;
 $color-secondary: #ff79da ;
-$color-secondary-ligter: #f59cdc ;
+$color-secondary-ligter: #fcb2e7 ;
 $color-tertiary : #99e2d0 ;
 $color-new : #278870 ;
 $color-white : #fff ;
@@ -121,12 +121,13 @@ body{
     box-shadow: 0px 7px 10px -6px $box-shadow;
     margin-bottom: 40px;
     text-align: center;
-    transform: scale(1);
+    transition: transform 400ms ease-in-out;
     
     &:hover{
         transform: scale(1.09);
         transition: transform 400ms ease-in-out;
         background: linear-gradient($color-secondary, $color-primary);
+        transition-delay: 100ms, 200ms;
         box-shadow: 0px 7px 10px 0px $box-shadow;
         color: $color-white ;
         cursor: pointer;
@@ -193,7 +194,7 @@ body{
     
     .choice:hover{
         background-color: $color-secondary-ligter;
-        transition-duration: 700ms;
+        transition: opacity, 1.5s;
     }
 
     .icone{
@@ -335,6 +336,7 @@ body{
     
     & :hover{
         color: $color-tertiary ;
+        transition: opacity, 900ms;
     }
     
     .footer_box{
@@ -361,6 +363,7 @@ body{
     
     .option:hover{
         color: $color-secondary;
+        transition: opacity, 900ms;
     }
 
     .icone{

@@ -145,8 +145,10 @@ body {
           box-shadow: 0px 7px 10px -6px #bdb6b6cb;
   margin-bottom: 40px;
   text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 .button:hover {
@@ -158,6 +160,8 @@ body {
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
+  -webkit-transition-delay: 100ms, 200ms;
+          transition-delay: 100ms, 200ms;
   -webkit-box-shadow: 0px 7px 10px 0px #bdb6b6cb;
           box-shadow: 0px 7px 10px 0px #bdb6b6cb;
   color: #fff;
@@ -233,9 +237,9 @@ body {
 }
 
 #operation .choice:hover {
-  background-color: #f59cdc;
-  -webkit-transition-duration: 700ms;
-          transition-duration: 700ms;
+  background-color: #fcb2e7;
+  -webkit-transition: opacity, 1.5s;
+  transition: opacity, 1.5s;
 }
 
 #operation .icone {
@@ -425,6 +429,8 @@ body {
 
 #information :hover {
   color: #99e2d0;
+  -webkit-transition: opacity, 900ms;
+  transition: opacity, 900ms;
 }
 
 #information .footer_box {
@@ -462,6 +468,8 @@ body {
 
 #information .option:hover {
   color: #ff79da;
+  -webkit-transition: opacity, 900ms;
+  transition: opacity, 900ms;
 }
 
 #information .icone {

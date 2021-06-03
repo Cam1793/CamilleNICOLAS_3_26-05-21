@@ -1,15 +1,18 @@
 /**variante color**/
 $color-primary: #9356dc ;
 $color-secondary: #ff79da ;
+$color-secondary-ligter: #f59cdc ;
 $color-tertiary : #99e2d0 ;
 $color-new : #278870 ;
 $color-white : #fff ;
-
+$box-shadow : #bdb6b6cb ;
 
 /**mixin**/
-@mixin footer_icone {
-    margin-left: 10px;
-    
+@mixin icone {
+    margin: 10px;
+}
+@mixin icone_footer {
+    margin-right: 10px;
 }
 
 body{
@@ -43,8 +46,8 @@ body{
         width: 100%;
         text-align: center;
         padding: 20px 0px 20px 0px;
-        box-shadow: 0px 4px 10px 4px rgb(89 89 89 / 20%);
-    
+        box-shadow: 0px 4px 10px 4px $box-shadow;
+        z-index: 1;
     }
 }
 
@@ -57,9 +60,9 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #eaeaea;
-    z-index: -1;
+    padding: 10px;
 
-    #geolocation_input{
+    #input{
         width: 200px;
         height: 2em;
         background-color: transparent;
@@ -69,12 +72,13 @@ body{
         text-align: center;
         margin-left: 10px;
     }
-    
+
     .fa-map-marker-alt{
         color: $color-primary;
         font-size: 1.3em;
     }
 }
+
 /***barre de recherche**/
 
 /***Exploration***/
@@ -114,18 +118,16 @@ body{
     font-weight: 600;
     width: 270px;
     height: 60px;
-    box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
+    box-shadow: 0px 7px 10px -6px $box-shadow;
     margin-bottom: 40px;
-
-    .btn_exploration{
-        text-align: center;
-    }
+    text-align: center;
+    transform: scale(1);
     
-    .button:hover{
-        transform: scale(1.05);
-        transition: transform 200ms ease-in-out;
+    &:hover{
+        transform: scale(1.09);
+        transition: transform 400ms ease-in-out;
         background: linear-gradient($color-secondary, $color-primary);
-        box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
+        box-shadow: 0px 7px 10px 0px $box-shadow;
         color: $color-white ;
         cursor: pointer;
     }
@@ -138,22 +140,21 @@ body{
     width: 100%;
     text-align: center;
     padding: 60px 0px 60px 0px;
-}
 
-.operation_title{
-    font-size: 3.5em;
-    font-weight: normal;
-    margin-bottom: 50px;
-    margin-top: 40px;
-    font-family: "shrikhand regular", sans-serif;
-
-    .operation_framing{
+    & .operation_title{
+        font-size: 3.5em;
+        font-weight: normal;
+        margin-bottom: 50px;
+        margin-top: 40px;
+        font-family: "shrikhand regular", sans-serif;
+    }
+    & .operation_framing{
         display: flex;
         justify-content: center;
         margin-bottom: 50px;
     }
     
-    .number{
+    & .number{
         border-radius: 50px;
         text-align: center;
         font-size: 1.5em;
@@ -167,11 +168,11 @@ body{
         z-index: 1;
     }
     
-    .operation_number{
+    & .operation_number{
         margin: 3px 0px 0px 0px;
     }
     
-    .operation_div{
+    &.operation_div{
         font-size: 1.4em;
         padding: 0px 0px 0px 30px;
         margin: 0;
@@ -186,12 +187,18 @@ body{
         padding: 10px 10px 10px 40px;
         margin-right: 3em;
         background-color: #eaeaea;
-        box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
+        box-shadow: 0px 7px 10px -6px $box-shadow;
         cursor: pointer;
     }
     
     .choice:hover{
-        background-color: $color-secondary;
+        background-color: $color-secondary-ligter;
+        transition-duration: 700ms;
+    }
+
+    .icone{
+        @include icone ;
+        color: $color-primary;
     }
 }
 /***Operation***/
@@ -220,6 +227,10 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    .restaurants_link{
+        text-decoration: none;
+    }
 }
 
 /**cart restaurants**/
@@ -233,15 +244,11 @@ body{
     box-shadow: 0px 0px 20px #0000002e;
     position: relative;
 
-    .restaurant_cart:hover{
-        transform: scale(1.02);
-        transition: transform 200ms ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+        transition: transform 400ms ease-in-out;
     }
-    
-    .restaurants_link{
-        text-decoration: none;
-    }
-    
+  
     .cart_img{
         width: 100%;
         border-radius: 15px 15px 0px 0px;
@@ -298,7 +305,7 @@ body{
         display: flex;
         align-items: center;
         padding-right: 20px;
-        color: grey;
+        color: $color-primary;
     }
 }
 /**cart restaurants**/
@@ -318,7 +325,7 @@ body{
         justify-content: center;
     }
     
-    .footer_title{
+    & .footer_title{
         color: $color-white ;
         font-family: "shrikhand regular", sans-serif;
         font-size: 2.5em;
@@ -326,7 +333,7 @@ body{
         text-decoration: none;
     }
     
-    .footer_title:hover{
+    & :hover{
         color: $color-tertiary ;
     }
     
@@ -349,19 +356,16 @@ body{
         text-decoration: none;
         color: $color-white ;
         font-size: 1.5em;
+        text-align: end;
     }
     
     .option:hover{
-        color: $color-tertiary ;
+        color: $color-secondary;
     }
-    
-    .fa-utensils{
-        @include footer_icone ;
+
+    .icone{
+        @include icone_footer ;
     }
-    
-    .fa-hands-helping{
-        @include footer_icone ;
-    }
-}
+}    
 /***Footer***/
 

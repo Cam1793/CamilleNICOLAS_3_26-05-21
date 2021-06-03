@@ -23,16 +23,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100%; 
 }
 
 .header-logo{
     width: 100%;
     text-align: center;
     padding: 20px 0px 20px 0px;
+    z-index: 1;
     box-shadow: 0px 4px 10px 4px rgb(89 89 89 / 20%);
-
 }
+/***Top-header***/
 
 /***barre de recherche**/
 .geolocation_search_bar{
@@ -43,11 +44,11 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #eaeaea;
-    z-index: -1;
+    padding: 10px;
 }
 
-#geolocation_input{
-    width: 200px;
+.geolocation_input{
+    width: 300px;
     height: 2em;
     background-color: transparent;
     border: none;
@@ -55,6 +56,10 @@ body{
     color: #9356DC;
     text-align: center;
     margin-left: 10px;
+}
+
+.geolocation_input:focus{
+    border: solid 3px #9356DC;
 }
 
 .fa-map-marker-alt{
@@ -91,10 +96,6 @@ body{
 }
 
 /***button***/
-.btn_exploration{
-    text-align: center;
-}
-
 .button{
     color: #9356DC;
     border-radius: 2em;
@@ -105,11 +106,13 @@ body{
     height: 60px;
     box-shadow: 0px 7px 10px -6px rgb(63 63 63 / 64%);
     margin-bottom: 40px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 400ms ease-in-out;
 }
 
 .button:hover{
-    transform: scale(1.05);
-    transition: transform 200ms ease-in-out;
+    transform: scale(1.15);
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
     color: white;

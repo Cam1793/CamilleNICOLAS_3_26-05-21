@@ -484,16 +484,55 @@ body {
   color: black;
 }
 
-.restaurant_cart .icone_heart {
-  font-size: 2em;
+.icone_heart {
+  font-size: 2.5em;
+  width: 80px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 20px;
-  color: #9356dc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.icone_heart .icone_bf {
+  position: absolute;
+}
+
+.icone_heart .icone_af {
+  position: absolute;
+}
+
+.icone_heart .icone_af:hover {
+  position: relative;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-animation: heart 2s linear;
+          animation: heart 2s linear;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /**cart restaurants**/

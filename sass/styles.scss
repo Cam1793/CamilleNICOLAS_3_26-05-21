@@ -5,6 +5,7 @@ $color-secondary-ligter: #fcb2e7 ;
 $color-tertiary : #99e2d0 ;
 $color-new : #278870 ;
 $color-white : #fff ;
+$color-black: #000 ;
 $box-shadow: #0c0a0a65 ;
 
 /****loading-spinner****/
@@ -341,7 +342,7 @@ body{
     .card_text{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between
     }
     
     .restaurant_name{
@@ -358,15 +359,41 @@ body{
         padding: 0;
         color: black;
     }
+}    
+.icone_heart{
+    font-size: 2.5em;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
     
-    .icone_heart{
-        font-size: 2em;
-        display: flex;
-        align-items: center;
-        padding-right: 20px;
-        color: $color-primary;
+    .icone_bf{
+        position:absolute;
     }
+    
+    .icone_af{
+        position: absolute;
+    }
+
+    .icone_af:hover{
+        position: relative;
+        transition-property: background;
+        animation: heart 2s linear;
+
+        @keyframes heart {
+            0%{
+                opacity: 0;
+                transition-delay: 1s;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+
 }
+
 /**cart restaurants**/
 
 /***Restaurants***/

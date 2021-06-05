@@ -5,15 +5,7 @@ $color-secondary-ligter: #fcb2e7 ;
 $color-tertiary : #99e2d0 ;
 $color-new : #278870 ;
 $color-white : #fff ;
-$box-shadow : #bdb6b6cb ;
-
-/**mixin**/
-@mixin icone {
-    margin: 10px;
-}
-@mixin icone_footer {
-    margin-right: 10px;
-}
+$box-shadow: #0c0a0a65 ;
 
 /****loading-spinner****/
 .loading{
@@ -22,12 +14,12 @@ $box-shadow : #bdb6b6cb ;
     justify-content: center;
     flex-direction: column;
     background: linear-gradient( 60deg, $color-secondary, $color-primary);
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 10;
     animation: disparition 7s linear;
     animation-fill-mode: both;
 
@@ -40,7 +32,7 @@ $box-shadow : #bdb6b6cb ;
         }
         100%{
             opacity: 0;
-            z-index: 1;
+            z-index: 0;
         }
     }
 }
@@ -104,13 +96,13 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    z-index: 1;
 
     .header-logo{
         width: 100%;
         text-align: center;
         padding: 20px 0px 20px 0px;
         box-shadow: 0px 4px 10px 4px $box-shadow;
-        z-index: 1;
     }
 }
 
@@ -157,7 +149,6 @@ body{
         align-items: center;
         justify-content: center;
         background-color: #f6f6f6;
-        z-index: 3;
     }
     
     .site_title{
@@ -189,6 +180,7 @@ body{
     margin-bottom: 40px;
     transform: scale(1);
     transition: transform 400ms ease-in-out;
+    position: relative;
     
     &:hover{
     transform: scale(1.15);
@@ -243,30 +235,31 @@ body{
         padding: 0px 0px 0px 30px;
         margin: 0;
     }
-    
-    .choice{
-        display: flex;
-        border-radius: 1em;
-        align-items: center;
-        width: 20vw;
-        height: 60px;
-        padding: 10px 10px 10px 40px;
-        margin-right: 3em;
-        background-color: #eaeaea;
-        box-shadow: 0px 7px 10px -6px $box-shadow;
-        cursor: pointer;
-    }
-    
-    .choice:hover{
+}    
+.choice{
+    display: flex;
+    border-radius: 1em;
+    align-items: center;
+    width: 20vw;
+    height: 60px;
+    padding: 10px 10px 10px 40px;
+    margin-right: 3em;
+    background-color: #eaeaea;
+    box-shadow: 0px 7px 10px -6px $box-shadow;
+    cursor: pointer;
+    position: relative;
+
+    &:hover{
         background-color: $color-secondary-ligter;
         transition: opacity, 1.5s;
     }
-
-    .icone{
-        @include icone ;
-        color: $color-primary;
-    }
 }
+
+.operation_icone{
+    margin: 10px;
+    color: $color-primary;
+}
+
 /***Operation***/
 
 /***Restaurants***/
@@ -385,55 +378,55 @@ body{
     flex-direction: column;
     background-color: black;
     padding: 20px 0px 20px 0px;
+    position: relative;
+}
+.footer_logo{
+    display: flex;
+    justify-content: center;
+}
 
-    .footer_logo{
-        display: flex;
-        justify-content: center;
-    }
-    
-    & .footer_title{
-        color: $color-white ;
-        font-family: "shrikhand regular", sans-serif;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        text-decoration: none;
-    }
-    
-    & :hover{
-        color: $color-tertiary ;
-        transition: opacity, 900ms;
-    }
-    
-    .footer_box{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .option_list{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .option{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        text-decoration: none;
-        color: $color-white ;
-        font-size: 1.5em;
-        text-align: end;
-    }
-    
-    .option:hover{
-        color: $color-secondary;
-        transition: opacity, 900ms;
-    }
+.footer_title{
+    color: $color-white ;
+    font-family: "shrikhand regular", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    .icone{
-        @include icone_footer ;
-    }
-}    
+.footer_title:hover{
+    color: $color-primary;
+}
+        
+.footer_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+    
+.option{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: $color-white ;
+    font-size: 1.5em;
+}
+
+.option:hover{
+    color: $color-secondary;
+}
+
+
+.footer_icone{
+    margin-right: 10px;
+}
+        
+
 /***Footer***/
-

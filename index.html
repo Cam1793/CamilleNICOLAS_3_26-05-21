@@ -11,21 +11,30 @@
             <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
         </head>
             <body>
+                <!--Loading-spinner-->
                 <div class="loading">
                     <span class="loading_spinner"><img src="logo/icone_onglet.png" alt="logo" class="icone_onglet"></span>
                     <p class="loading_text">Bonne appétit !</p>
                 </div>
+                <!--Loading-spinner-->
+
                 <!--Top Header-->
                 <header id="header-top">
                     <div class="header-logo">
                         <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
                     </div>
-                    <div class="geolocation_search_bar">
-                        <i class="fas fa-map-marker-alt" id="icone"></i>
-                        <input type="search" class="geolocation_input" name="recherche" placeholder="Paris, Belleville">
-                    </div>
                 </header>
+                <!--Top Header-->
+              
+                <!--Main-->
                     <main id="main">
+                        <!--Barre de recherche-->
+                        <div class="geolocation_search_bar">
+                            <i class="fas fa-map-marker-alt" id="icone"></i>
+                            <input type="search" id="input" name="recherche" placeholder="Paris, Belleville">
+                        </div>
+                        <!--Barre de recherche-->
+
                         <!--Exploration-->
                         <section id="exploration">
                             <div class="exploration_framing">
@@ -46,7 +55,7 @@
                                         <p class="operation_number">1</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-mobile-alt fa-2x icone"></i>
+                                        <i class="fas fa-mobile-alt fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Choisissez un restaurant</h3>
                                     </div>
                                     <!--div choisissez un restaurant-->
@@ -56,7 +65,7 @@
                                         <p class="operation_number">2</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-list fa-2x icone"></i>
+                                        <i class="fas fa-list fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Composez votre menu</h3>
                                     </div>
                                     <!--div composez votre menu-->
@@ -66,7 +75,7 @@
                                         <p class="operation_number">3</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-store fa-2x icone"></i>
+                                        <i class="fas fa-store fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Déguster au restaurant</h3>
                                     </div>
                                     <!--div déguster au restaurant-->
@@ -161,8 +170,8 @@
                             </div>
                             <div class="footer_box">
                                 <ul class="option_list">
-                                    <a href="#" class="option"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
-                                    <a href="#" class="option"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
+                                    <a href="#" class="option"><i class="fas fa-utensils footer_icone"></i>Proposer un restaurant</a>
+                                    <a href="#" class="option"><i class="fas fa-hands-helping footer_icone"></i>Devenir partenaire</a>
                                     <a href="#" class="option">Montion légales</a>
                                     <a href="mailto:camille.nicolas93@gmail.com" class="option">Contact</a>
                                 </ul>

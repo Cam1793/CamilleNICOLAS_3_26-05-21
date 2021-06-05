@@ -1,5 +1,4 @@
 /**variante color**/
-/**mixin**/
 /****loading-spinner****/
 .loading {
   display: -webkit-box;
@@ -16,12 +15,12 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background: linear-gradient(60deg, #ff79da, #9356dc);
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   -webkit-animation: disparition 7s linear;
           animation: disparition 7s linear;
   -webkit-animation-fill-mode: both;
@@ -37,7 +36,7 @@
   }
   100% {
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
   }
 }
 
@@ -50,7 +49,7 @@
   }
   100% {
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
   }
 }
 
@@ -151,15 +150,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  z-index: 1;
 }
 
 #header-top .header-logo {
   width: 100%;
   text-align: center;
   padding: 20px 0px 20px 0px;
-  -webkit-box-shadow: 0px 4px 10px 4px #bdb6b6cb;
-          box-shadow: 0px 4px 10px 4px #bdb6b6cb;
-  z-index: 1;
+  -webkit-box-shadow: 0px 4px 10px 4px #0c0a0a65;
+          box-shadow: 0px 4px 10px 4px #0c0a0a65;
 }
 
 /***barre de recherche**/
@@ -217,7 +216,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f6f6f6;
-  z-index: 3;
 }
 
 #exploration .site_title {
@@ -243,14 +241,15 @@ body {
   font-weight: 600;
   width: 270px;
   height: 60px;
-  -webkit-box-shadow: 0px 7px 10px -6px #bdb6b6cb;
-          box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+  -webkit-box-shadow: 0px 7px 10px -6px #0c0a0a65;
+          box-shadow: 0px 7px 10px -6px #0c0a0a65;
   margin-bottom: 40px;
   text-align: center;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  position: relative;
 }
 
 .button:hover {
@@ -264,8 +263,8 @@ body {
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-transition-delay: 100ms, 200ms;
           transition-delay: 100ms, 200ms;
-  -webkit-box-shadow: 0px 7px 10px 0px #bdb6b6cb;
-          box-shadow: 0px 7px 10px 0px #bdb6b6cb;
+  -webkit-box-shadow: 0px 7px 10px 0px #0c0a0a65;
+          box-shadow: 0px 7px 10px 0px #0c0a0a65;
   color: #fff;
   cursor: pointer;
 }
@@ -320,7 +319,7 @@ body {
   margin: 0;
 }
 
-#operation .choice {
+.choice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,18 +332,19 @@ body {
   padding: 10px 10px 10px 40px;
   margin-right: 3em;
   background-color: #eaeaea;
-  -webkit-box-shadow: 0px 7px 10px -6px #bdb6b6cb;
-          box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+  -webkit-box-shadow: 0px 7px 10px -6px #0c0a0a65;
+          box-shadow: 0px 7px 10px -6px #0c0a0a65;
   cursor: pointer;
+  position: relative;
 }
 
-#operation .choice:hover {
+.choice:hover {
   background-color: #fcb2e7;
   -webkit-transition: opacity, 1.5s;
   transition: opacity, 1.5s;
 }
 
-#operation .icone {
+.operation_icone {
   margin: 10px;
   color: #9356dc;
 }
@@ -510,9 +510,10 @@ body {
           flex-direction: column;
   background-color: black;
   padding: 20px 0px 20px 0px;
+  position: relative;
 }
 
-#information .footer_logo {
+.footer_logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,21 +522,20 @@ body {
           justify-content: center;
 }
 
-#information .footer_title {
+.footer_title {
   color: #fff;
   font-family: "shrikhand regular", sans-serif;
   font-size: 2.5em;
   margin-bottom: 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
-#information :hover {
-  color: #99e2d0;
-  -webkit-transition: opacity, 900ms;
-  transition: opacity, 900ms;
+.footer_title:hover {
+  color: #9356dc;
 }
 
-#information .footer_box {
+.footer_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,7 +545,7 @@ body {
   margin-bottom: 20px;
 }
 
-#information .option_list {
+.option_list {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -554,7 +554,7 @@ body {
       justify-content: space-around;
 }
 
-#information .option {
+.option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,16 +565,13 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 1.5em;
-  text-align: end;
 }
 
-#information .option:hover {
+.option:hover {
   color: #ff79da;
-  -webkit-transition: opacity, 900ms;
-  transition: opacity, 900ms;
 }
 
-#information .icone {
+.footer_icone {
   margin-right: 10px;
 }
 

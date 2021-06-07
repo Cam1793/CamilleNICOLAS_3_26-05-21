@@ -11,28 +11,36 @@
             <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
         </head>
             <body>
+                <!--Loading-spinner-->
                 <div class="loading">
                     <span class="loading_spinner"><img src="logo/icone_onglet.png" alt="logo" class="icone_onglet"></span>
                     <p class="loading_text">Bonne appétit !</p>
                 </div>
+                <!--Loading-spinner-->
+
                 <!--Top Header-->
                 <header id="header-top">
                     <div class="header-logo">
                         <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
                     </div>
-                    <div class="geolocation_search_bar">
-                        <i class="fas fa-map-marker-alt" id="icone"></i>
-                        <input type="search" id="input" name="recherche" placeholder="Paris, Belleville">
-                    </div>
                 </header>
-                    <!--Main-->
+                <!--Top Header-->
+              
+                <!--Main-->
                     <main id="main">
+                        <!--Barre de recherche-->
+                        <div class="geolocation_search_bar">
+                            <i class="fas fa-map-marker-alt" id="icone"></i>
+                            <input type="search" id="input" name="recherche" placeholder="Paris, Belleville">
+                        </div>
+                        <!--Barre de recherche-->
+
                         <!--Exploration-->
                         <section id="exploration">
                             <div class="exploration_framing">
                                 <h1 class="site_title">Réservez le menu qui vous convient</h1>
                                 <h4 class="introduction">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
-                                    <div class="btn_exploration">
+                                    <div>
                                         <button type="button" class="button">Explorer nos restaurants</button>
                                     </div>   
                             </div>
@@ -47,7 +55,7 @@
                                         <p class="operation_number">1</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-mobile-alt fa-2x icone"></i>
+                                        <i class="fas fa-mobile-alt fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Choisissez un restaurant</h3>
                                     </div>
                                     <!--div choisissez un restaurant-->
@@ -57,7 +65,7 @@
                                         <p class="operation_number">2</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-list fa-2x icone"></i>
+                                        <i class="fas fa-list fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Composez votre menu</h3>
                                     </div>
                                     <!--div composez votre menu-->
@@ -67,7 +75,7 @@
                                         <p class="operation_number">3</p>
                                     </div>
                                     <div class="choice">
-                                        <i class="fas fa-store fa-2x icone"></i>
+                                        <i class="fas fa-store fa-2x operation_icone"></i>
                                         <h3 class="operation_div">Déguster au restaurant</h3>
                                     </div>
                                     <!--div déguster au restaurant-->
@@ -89,8 +97,8 @@
                                                     <h4 class="menu_name">Ménilmontant</h4>
                                                 </div>
                                                 <div class="icone_heart">
-                                                    <i class="far fa-heart"></i>
-                                                    <i class="fas fa-heart"></i>
+                                                    <i class="far fa-heart icone_bf"></i>
+                                                    <i class="fas fa-heart icone_af"></i> 
                                                 </div>
                                             </div>
                                         </a>
@@ -109,8 +117,8 @@
                                                         <h4 class="menu_name">Charonne</h4>
                                                     </div>
                                                     <div class="icone_heart">
-                                                        <i class="far fa-heart"></i>
-                                                        <i class="fas fa-heart"></i>
+                                                        <i class="far fa-heart icone_bf"></i>
+                                                        <i class="fas fa-heart icone_af"></i> 
                                                     </div>
                                                 </div>
                                         </div>
@@ -127,8 +135,8 @@
                                                     <h4 class="menu_name">Cité rouge</h4>
                                                 </div>
                                                 <div class="icone_heart">
-                                                    <i class="far fa-heart"></i>
-                                                    <i class="fas fa-heart"></i>
+                                                    <i class="far fa-heart icone_bf"></i>
+                                                    <i class="fas fa-heart icone_af"></i> 
                                                 </div>
                                             </div>
                                         </div>
@@ -145,8 +153,8 @@
                                                     <h4 class="menu_name">Folie-Méricourt</h4>
                                                 </div>
                                                 <div class="icone_heart">
-                                                    <i class="far fa-heart"></i>
-                                                    <i class="fas fa-heart"></i>
+                                                    <i class="far fa-heart icone_bf"></i>
+                                                    <i class="fas fa-heart icone_af"></i> 
                                                 </div>
                                             </div>
                                         </div>
@@ -162,8 +170,8 @@
                             </div>
                             <div class="footer_box">
                                 <ul class="option_list">
-                                    <a href="#" class="option"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
-                                    <a href="#" class="option"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
+                                    <a href="#" class="option"><i class="fas fa-utensils footer_icone"></i>Proposer un restaurant</a>
+                                    <a href="#" class="option"><i class="fas fa-hands-helping footer_icone"></i>Devenir partenaire</a>
                                     <a href="#" class="option">Montion légales</a>
                                     <a href="mailto:camille.nicolas93@gmail.com" class="option">Contact</a>
                                 </ul>

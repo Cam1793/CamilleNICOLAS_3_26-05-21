@@ -5,15 +5,8 @@ $color-secondary-ligter: #fcb2e7 ;
 $color-tertiary : #99e2d0 ;
 $color-new : #278870 ;
 $color-white : #fff ;
-$box-shadow : #bdb6b6cb ;
-
-/**mixin**/
-@mixin icone {
-    margin: 10px;
-}
-@mixin icone_footer {
-    margin-right: 10px;
-}
+$color-black: #000 ;
+$box-shadow: #0c0a0a65 ;
 
 /****loading-spinner****/
 .loading{
@@ -27,9 +20,26 @@ $box-shadow : #bdb6b6cb ;
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 3;
+    z-index: 10;
+    animation: disparition 7s linear;
+    animation-fill-mode: both;
 
-    &_spinner{
+    @keyframes disparition{
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+}
+.loading_spinner{
+        display: flex;
+        justify-content: center;
         border: solid 10px;
         border-top-color: #9356dc;
         border-bottom-color: #ff79da ;
@@ -40,23 +50,16 @@ $box-shadow : #bdb6b6cb ;
         width: 80px;
         height: 80px;
         animation: loading 1.5s ease-in-out infinite;
-        
-            @keyframes loading{
-                to{
-                    transform: rotate(1turn);
-                }
-                
-            }
 
-        >::after{
-            transition:all 3 ease-in-out;
-            opacity: 1;
-        }
-            
-            .icone_onglet{
-                width: 80px;
+        @keyframes loading {
+            to{
+                transform: rotate(1turn);
             }
-    }
+        }
+    
+        .icone_onglet{
+            width: 80px;
+        }
 }
 
 .loading_text{
@@ -94,13 +97,13 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    z-index: 1;
 
     .header-logo{
         width: 100%;
         text-align: center;
         padding: 20px 0px 20px 0px;
         box-shadow: 0px 4px 10px 4px $box-shadow;
-        z-index: 1;
     }
 }
 
@@ -113,9 +116,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #eaeaea;
-    padding: 10px;
 
-    #input{
+    & input{
         width: 200px;
         height: 2em;
         background-color: transparent;
@@ -124,6 +126,10 @@ body{
         color: $color-primary;
         text-align: center;
         margin-left: 10px;
+
+        &:focus{
+            border: solid 2px #9356DC;
+        }
     }
 
     .fa-map-marker-alt{
@@ -173,17 +179,16 @@ body{
     height: 60px;
     box-shadow: 0px 7px 10px -6px $box-shadow;
     margin-bottom: 40px;
-    text-align: center;
+    transform: scale(1);
     transition: transform 400ms ease-in-out;
+    position: relative;
     
     &:hover{
-        transform: scale(1.09);
-        transition: transform 400ms ease-in-out;
-        background: linear-gradient($color-secondary, $color-primary);
-        transition-delay: 100ms, 200ms;
-        box-shadow: 0px 7px 10px 0px $box-shadow;
-        color: $color-white ;
-        cursor: pointer;
+    transform: scale(1.15);
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0px 7px 10px 0px rgb(63 63 63 / 64%);
+    color: white;
+    cursor: pointer;
     }
 }
 /***button***/
@@ -219,7 +224,7 @@ body{
         height: 30px;
         background-color: $color-primary;
         color: $color-white;
-        z-index: 1;
+        z-index: 2;
     }
     
     & .operation_number{
@@ -231,30 +236,31 @@ body{
         padding: 0px 0px 0px 30px;
         margin: 0;
     }
-    
-    .choice{
-        display: flex;
-        border-radius: 1em;
-        align-items: center;
-        width: 20vw;
-        height: 60px;
-        padding: 10px 10px 10px 40px;
-        margin-right: 3em;
-        background-color: #eaeaea;
-        box-shadow: 0px 7px 10px -6px $box-shadow;
-        cursor: pointer;
-    }
-    
-    .choice:hover{
+}    
+.choice{
+    display: flex;
+    border-radius: 1em;
+    align-items: center;
+    width: 20vw;
+    height: 60px;
+    padding: 10px 10px 10px 40px;
+    margin-right: 3em;
+    background-color: #eaeaea;
+    box-shadow: 0px 7px 10px -6px $box-shadow;
+    cursor: pointer;
+    position: relative;
+
+    &:hover{
         background-color: $color-secondary-ligter;
         transition: opacity, 1.5s;
     }
-
-    .icone{
-        @include icone ;
-        color: $color-primary;
-    }
 }
+
+.operation_icone{
+    margin: 10px;
+    color: $color-primary;
+}
+
 /***Operation***/
 
 /***Restaurants***/
@@ -336,7 +342,7 @@ body{
     .card_text{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between
     }
     
     .restaurant_name{
@@ -353,15 +359,41 @@ body{
         padding: 0;
         color: black;
     }
+}    
+.icone_heart{
+    font-size: 2.5em;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
     
-    .icone_heart{
-        font-size: 2em;
-        display: flex;
-        align-items: center;
-        padding-right: 20px;
-        color: $color-primary;
+    .icone_bf{
+        position:absolute;
     }
+    
+    .icone_af{
+        position: absolute;
+    }
+
+    .icone_af:hover{
+        position: relative;
+        transition-property: background;
+        animation: heart 2s linear;
+
+        @keyframes heart {
+            0%{
+                opacity: 0;
+                transition-delay: 1s;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+
 }
+
 /**cart restaurants**/
 
 /***Restaurants***/
@@ -373,55 +405,55 @@ body{
     flex-direction: column;
     background-color: black;
     padding: 20px 0px 20px 0px;
+    position: relative;
+}
+.footer_logo{
+    display: flex;
+    justify-content: center;
+}
 
-    .footer_logo{
-        display: flex;
-        justify-content: center;
-    }
-    
-    & .footer_title{
-        color: $color-white ;
-        font-family: "shrikhand regular", sans-serif;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        text-decoration: none;
-    }
-    
-    & :hover{
-        color: $color-tertiary ;
-        transition: opacity, 900ms;
-    }
-    
-    .footer_box{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .option_list{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .option{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        text-decoration: none;
-        color: $color-white ;
-        font-size: 1.5em;
-        text-align: end;
-    }
-    
-    .option:hover{
-        color: $color-secondary;
-        transition: opacity, 900ms;
-    }
+.footer_title{
+    color: $color-white ;
+    font-family: "shrikhand regular", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    .icone{
-        @include icone_footer ;
-    }
-}    
+.footer_title:hover{
+    color: $color-primary;
+}
+        
+.footer_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+    
+.option{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: $color-white ;
+    font-size: 1.5em;
+}
+
+.option:hover{
+    color: $color-secondary;
+}
+
+
+.footer_icone{
+    margin-right: 10px;
+}
+        
+
 /***Footer***/
-

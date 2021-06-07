@@ -1,123 +1,7 @@
-$color-primary: #9356dc ;
-$color-secondary: #ff79da ;
-$color-secondary-ligter: #fcb2e7 ;
-$color-tertiary: #99e2d0 ;
-$color-new: #278870 ;
-$color-white: #fff ;
-$box-shadow: #bdb6b6cb ;
-$box-shadow-darken: #0c0a0a65 ;
-$color-black: black;
-
-/**mixin**/
-@mixin icone {
-    margin: 10px;
-}
-@mixin icone_footer {
-    margin-right: 10px;
-}
-
-@mixin movement_btn {
-    transform: scale(1.09);
-    transition: transform 400ms ease-in-out;
-    background: linear-gradient($color-secondary, $color-primary);
-    transition-delay: 100ms, 200ms;
-    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
-    color: $color-white ;
-    cursor: pointer;
-}
-
-@mixin movement_box {
-    transform: scale(1.03);
-    transition: transform 400ms ease-in-out;
-    background: transparent;
-    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
-    cursor: pointer;
-}
-
-@mixin apparition_fraiming_box {
-    animation: apparition 3s linear;
-    transition-delay: 4s;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(10px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }  
-}
-
-@mixin apparition_box_1 {
-    animation: apparition 3s linear;
-    animation-delay: 3s ;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(10px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }
-}
-
-@mixin apparition_box_2 {
-    animation: apparition 3s linear;
-    animation-fill-mode: both;
-    animation-delay: 3.5s;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(20px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }
-}
-
-@mixin apparition_box_3 {
-    animation: apparition 3s linear;
-    animation-fill-mode: both;
-    animation-delay: 4.5s;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(20px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }
-}
-
-@mixin box {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    height: 80px;
-    box-shadow: 5px 5px 10px #d3d1d1;
-    border-radius: 20px;
-    background-color: $color-white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 30px;
-    position: relative;
-}
-
+/***Variables et Mixins**/
+@import 'variable.scss';
+@import 'mixin.scss';
+/***Variables et Mixins**/
 /****loading-spinner****/
 .loading{
     display: flex;
@@ -180,23 +64,17 @@ $color-black: black;
 }
 /****loading-spinner****/
 
+/***CSS page de base***/
 body{
-    font-family: "Roboto-Regular", sans-serif;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center
+    @include body;
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+main{
+    @include main;
 }
+/***CSS page de base***/
+
+/**Page menu***/
 
 /****header****/
 

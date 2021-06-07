@@ -6,6 +6,7 @@
 /***Body***/
 /***Main**/
 /***Variables et Mixins**/
+
 /****loading-spinner****/
 .loading {
   display: -webkit-box;
@@ -28,6 +29,7 @@
   left: 0;
   top: 0;
   z-index: 10;
+
   -webkit-animation: disparition 4s ease-in;
           animation: disparition 4s ease-in;
   -webkit-animation-fill-mode: both;
@@ -265,8 +267,8 @@ main {
   font-weight: 600;
   width: 270px;
   height: 60px;
-  -webkit-box-shadow: 0px 7px 10px -6px #bdb6b6cb;
-          box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+  -webkit-box-shadow: 0px 7px 10px -6px #0c0a0a65;
+          box-shadow: 0px 7px 10px -6px #0c0a0a65;
   margin-bottom: 40px;
   text-align: center;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
@@ -324,7 +326,7 @@ main {
   margin-right: -0.8em;
   background-color: #9356dc;
   color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .operation .operation_number-choice {
@@ -562,16 +564,55 @@ main {
   color: black;
 }
 
-.restaurant_cart .icone_heart {
-  font-size: 2em;
+.icone_heart {
+  font-size: 2.5em;
+  width: 80px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 20px;
-  color: #9356dc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.icone_heart .icone_bf {
+  position: absolute;
+}
+
+.icone_heart .icone_af {
+  position: absolute;
+}
+
+.icone_heart .icone_af:hover {
+  position: relative;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-animation: heart 2s linear;
+          animation: heart 2s linear;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /**cart restaurants**/
@@ -601,11 +642,13 @@ main {
 }
 
 #information .information_title {
+
   color: #fff;
   font-family: "shrikhand regular", sans-serif;
   font-size: 3em;
   margin-bottom: 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .information_box {
@@ -643,11 +686,10 @@ main {
 
 .information_box .information_box--option_list .option:hover {
   color: #ff79da;
-  -webkit-transition: opacity, 900ms;
-  transition: opacity, 900ms;
 }
 
 .information_box .information_box--option_list .icone {
+
   margin-right: 10px;
   color: #9356dc;
 }

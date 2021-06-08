@@ -95,7 +95,7 @@ main{
 .header_navigation{
     display: flex;
     justify-content: flex-end;
-    
+    width: 100%;
     .header_navigation_menu{
         width: 30%;
     }
@@ -106,6 +106,7 @@ main{
             display: flex;
             justify-content: space-around;
             align-items: center;
+            
         }
 
             a{
@@ -126,6 +127,7 @@ main{
                     }           
 }
 /****header****/
+
 
 /***Intro***/
 #home_page_intro{
@@ -488,3 +490,213 @@ main{
 /***Footer***/
 
 /***Page accueil restaurant***/
+
+
+
+
+/***Page Menu***/
+
+/***Header***/
+.header_framing{
+    display: flex;
+    margin-top: 30px;
+}
+.back_to_home_page{
+    font-size: 3em;
+    color: $color-black;
+    margin-left: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover{
+        color:$color-tertiary;
+        transition: opacity, 300ms;
+    }
+}
+/***Top-header***/
+
+/***Image header***/
+.cart_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .picture_header{
+        height: 30em;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.img_title_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "shrikhand regular", sans-serif;
+    position: relative;
+}
+.icone_heart{
+    font-size: 1em;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+    .icone_bf{
+        position: absolute;
+        border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
+    }
+    
+    .icone_af{
+        position: absolute;
+        color: linear-gradient( 60deg, $color-secondary, $color-primary);
+    }
+
+    .icone_af:hover{
+        position: relative;
+        transition-property: background;
+        animation: heart 2s linear;
+
+        @keyframes heart {
+            0%{
+                opacity: 0;
+                transition-delay: 1s;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+
+}
+/***Image header***/
+
+/***Menu***/
+#menu{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10em;
+    position: relative;
+
+        .menu_framing{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            position: relative;
+        }
+
+            .starter_framing{
+                width: 300px;
+            }
+            
+                .main_dish_framing{
+                    width: 350px;
+                }
+            
+                    .dessert_framing{
+                        width: 300px;
+                    }
+
+                        .title_dish{
+                            margin: 10px 0px 0px 10px;
+                            font-size: 1.4em;
+                        }
+                    
+                            .name_dish{
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 0px 20px 0px 10px;
+                            align-items: center;
+                            }
+                    
+                                .name_with_dish{
+                                    margin: 0;
+                                    font-size: 1.3em;
+                                    font-weight: normal;
+                                    white-space: nowrap;
+                                    text-overflow: clip;
+                                }
+                    
+                                    .price{
+                                        font-size: 1.3em;
+                                    }
+}
+
+.starter_box{
+        @include box;
+        @include apparition_box_1;
+    
+        &:hover{
+            transform: scale(1.03);
+            transition: transform 400ms ease-in-out;
+            background: transparent;
+            box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+            cursor: pointer;
+            background-color: transparent;
+            text-overflow: ellipsis;
+        }  
+    }
+
+.main_dish_box{
+    @include box;
+    @include apparition_box_2;
+
+    &:hover{
+        transform: scale(1.03);
+        transition: transform 400ms ease-in-out;
+        background: transparent;
+        box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+        cursor: pointer;
+        background-color: transparent;
+        text-overflow: ellipsis;
+        
+    }  
+}
+
+.dessert_box{
+    @include box;
+    @include apparition_box_3;
+
+
+    &:hover{
+        transform: scale(1.03);
+        transition: transform 400ms ease-in-out;
+        background: transparent;
+        box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+        cursor: pointer;
+        background-color: transparent;
+        text-overflow: ellipsis;
+        
+    }  
+}
+/***Menu***/
+
+/***Boutton Commander***/
+.order{
+    text-align: center; 
+    margin-bottom: 50px;
+    position: relative; 
+
+    .button{
+        color: $color-primary;
+        border-radius: 2em;
+        border: solid 1px $color-primary;
+        font-size: 1.5em;
+        font-weight: 600;
+        width: 270px;
+        height: 60px;
+        box-shadow: 0px 7px 10px -6px $box-shadow;
+        margin-bottom: 40px;
+        text-align: center;
+        transition: transform 400ms ease-in-out;
+
+        &:hover{
+            @include movement_btn;
+        }
+    }
+}
+
+/***Boutton Commander***/
+/***Page Menu***/

@@ -5,7 +5,7 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="css/menu.css">
+            <link rel="stylesheet" href="css/styles.css">
             <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
             <link rel="shortcut icon" href="logo/icone_onglet.png">
             <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -14,16 +14,37 @@
                 <!--Loading-spinner-->
                 <div class="loading">
                     <span class="loading_spinner"><img src="logo/icone_onglet.png" alt="logo" class="icone_onglet"></span>
-                    <p class="loading_text">À table !</p>
+                    <p class="loading_text">Chargement de la page...</p>
                 </div>
                 <!--Loading-spinner-->
-                <!--Top Header-->
-                <header id="top-header"> 
-                    <div class="logo">
-                        <a href="index.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
-                        <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
+
+                <!--Header-->
+                <header id="header">
+                    <!--Bouton retour vers page d'accueil-->
+                    <div class="header_framing">
+                        <div>
+                            <a href="index.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
+                        </div>
+                        <!--Menu de navigation-->
+                        <div class="header_navigation">
+                            <nav class="header_navigation_menu">
+                                <ul class="header_navigation_menu--list">
+                                    <a href="#" class="header_navigation_menu--list--link">Se connecter</a>
+                                    <a href="#" class="header_navigation_menu--list--link">S'inscire</a>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
+                    <!--Logo-->
+                    <div class="header_logo">
+                        <div>
+                            <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
+                        </div>
+                    </div>                  
                 </header>
+                <!--Header-->
+                    
+                    <!--Main-->
                     <main>
                         <!--Image en-tête-->
                         <section>
@@ -41,13 +62,13 @@
 
                         <!--Menu-->
                         <section id="menu">
-                            <div class="framing_dish">
+                            <div class="menu_framing">
                                 <!--Starter-->
-                                <div class="starter">
+                                <div class="box_framing">
                                     <h2>Entrées</h2>
 
                                         <!--Tartare-->
-                                        <div class="box_1">
+                                        <div class="starter_box">
                                             <h3 class="title_dish">Tartare de poulpe acidulé</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Aux zestes d'orange</h3>
@@ -58,7 +79,7 @@
                                         <!--Tartare-->
 
                                         <!--Velouté-->
-                                        <div class="box_2">
+                                        <div class="starter_box">
                                             <h3 class="title_dish">Velouté de légumes d'antan</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Carotte, panais, topinambour</h3>
@@ -68,7 +89,7 @@
                                         <!--Velouté-->
 
                                         <!--Soupe-->
-                                        <div class="box_3">
+                                        <div class="starter_box">
                                             <h3 class="title_dish">Soupe à l'oignon</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Revisitée</h3>
@@ -80,11 +101,11 @@
                                 <!--Starter-->
                                 
                                 <!--Main dish-->
-                                <div class="main_dish">
+                                <div class="box_framing">
                                     <h2>Plats</h2>
 
                                         <!--Coquilles saint-jacques-->
-                                        <div class="box_1">
+                                        <div class="main_dish_box">
                                             <h3 class="title_dish">Coquilles Saint-Jacques</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Accompagnées d'une purée de panais</h3>                             
@@ -94,7 +115,7 @@
                                         <!--Coquilles saint-jacques-->
 
                                         <!--Magret de canard-->
-                                        <div class="box_2"> 
+                                        <div class="main_dish_box"> 
                                             <h3 class="title_dish">Magret de canard</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Et parmentier de pomme de terre</h3>
@@ -104,7 +125,7 @@
                                         <!--Magret de canard-->
 
                                         <!--Pigeonneau d'Ile et Vilaine-->
-                                        <div class="box_3">
+                                        <div class="main_dish_box">
                                             <h3  class="title_dish">Pigeonneau d'Ile et Vilaine</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Sur son lit de gnocchis aux légumes</h3>
@@ -116,11 +137,11 @@
                                 <!--Main dish-->
 
                                 <!--Dessert-->
-                                <div class="dessert">
+                                <div class="box_framing">
                                     <h2>Desserts</h2>
 
                                         <!--Pétales de violettes glacées-->
-                                        <div class="box_1">
+                                        <div class="dessert_box">
                                             <h3 class="title_dish">Pétales de violettes glacées</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Et purée de noisettes</h3>
@@ -130,7 +151,7 @@
                                         <!--Pétales de violettes glacées-->
 
                                         <!--Fondant au chocolat-->
-                                        <div class="box_2">
+                                        <div class="dessert_box">
                                             <h3 class="title_dish">Fondant au chocolat</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Revisité</h3>                                   
@@ -140,7 +161,7 @@
                                         <!--Fondant au chocolat-->
 
                                         <!--Millefeuille croustillant-->
-                                        <div class="box_3">
+                                        <div class="dessert_box">
                                             <h3 class="title_dish">Millefeuille croustillant</h3>
                                             <div class="name_dish">
                                                 <h3 class="name_with_dish">Myrtilles et pâte d'amande</h3>
@@ -162,11 +183,11 @@
                     </main>     
                         <!--Footer-->
                         <footer id="information">
-                            <div class="logo_footer">
-                                <a href="index.html" class="title_footer">Ohmyfood</a>
+                            <div class="information_logo">
+                                <a href="index.html" class="information_title">Ohmyfood</a>
                             </div>
-                            <div class="footer_box">
-                                <ul class="option_list">
+                            <div class="information_box">
+                                <ul class="information_box--option_list">
                                     <a href="#" class="option"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
                                     <a href="#" class="option"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
                                     <a href="#" class="option">Montion légales</a>
@@ -174,6 +195,6 @@
                                 </ul>
                             </div>
                         </footer>
-                        <!--Footer-->     
+                        <!--Footer-->  
             </body>
 </html>

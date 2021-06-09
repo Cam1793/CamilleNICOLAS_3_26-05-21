@@ -41,14 +41,26 @@
             <section id="form">
                 <h1 class="form_title">Quelques informations</h1>
                     <div class="form_framing">
-                        <input type="text" class="form_text" placeholder="Nom">
-                        <input type="text" class="form_text" placeholder="Prénom">
-                        <input type="text" class="form_text" placeholder="Adresse">
-                        <input type="text" class="form_text" placeholder="Code Postale">
-                        <input type="text" class="form_text" placeholder="Ville">
-                        <input type="text" class="form_text" placeholder="Téléphone fixe">
-                        <input type="text" class="form_text" placeholder="Mobile">
-                        <input type="text" class="form_text" placeholder="Numéro compte premium">
+                        <form method="POST" action="#">
+                                <p class="form_fraiming--name">
+                                    <label for="name">Nom</label> : <input type="text" class="form_text"> 
+                                    <label for="name">Prénom</label> : <input type="text" class="form_text">
+                                </p>
+                                <p class="form_fraiming--adress">
+                                    <label for="name">Adresse</label> : <input type="text" class="form_text">
+                                </p>
+                                <p class="form_fraiming--city">
+                                    <label for="name">Code Postale</label> : <input type="number" class="form_text">
+                                    <label for="name">Ville</label> : <input type="text" class="form_text">
+                                </p>
+                                <p class="form_fraiming--phone">
+                                    <label for="name">Téléphone fixe</label> : <input type="tel" class="form_text">
+                                    <label for="name">Mobile</label> : <input type="tel" class="form_text">
+                                </p>
+                                <p class="form_fraiming--fidelity">
+                                    <label for="name">Numéro compte premium</label> :<input type="text" class="form_text">
+                                </p>
+                        </form>
                     </div>
             </section>
 

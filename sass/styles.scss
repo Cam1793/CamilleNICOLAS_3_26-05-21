@@ -74,7 +74,7 @@ main{
 
 
 
-/***Home Page***/
+//***Index***////
 
 /****header****/
 #header{
@@ -127,7 +127,6 @@ main{
                     }           
 }
 /****header****/
-
 
 /***Intro***/
 #home_page_intro{
@@ -186,22 +185,24 @@ main{
         }
     }
 }
+/***button***/
 
-/***Home Page***/
+//***Index***////
 
 
 
-/***Page accueil restaurant***/
+////***Page accueil restaurant***////
 
 /***Même header***/
 
 /***Operation***/
 .operation{
-    margin: 5em 0em 2em 0em;
+    margin: 3em 0em 4em 0em;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 50em;
+    width: 35em;
     position: relative;
 
     .operation_number{
@@ -576,8 +577,9 @@ main{
 /***Menu***/
 #menu{
     display: flex;
+    justify-content: space-around;
     width: 100%;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
     position: relative;
 
         .menu_framing{
@@ -677,7 +679,7 @@ main{
 .order{
     text-align: center; 
     margin-bottom: 50px;
-    position: relative; 
+    position: relative;
 
     .button{
         color: $color-primary;
@@ -688,15 +690,92 @@ main{
         width: 270px;
         height: 60px;
         box-shadow: 0px 7px 10px -6px $box-shadow;
-        margin-bottom: 40px;
+        margin: 20px 0px 20px 30px;
         text-align: center;
         transition: transform 400ms ease-in-out;
 
         &:hover{
             @include movement_btn;
         }
+
+        &:focus{
+            background: linear-gradient($color-primary, $color-tertiary);
+            color: $color-white;
+        }
     }
 }
-
 /***Boutton Commander***/
 /***Page Menu***/
+
+
+/***Page formulaire***/
+#form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: $color-grey-light;
+    margin-bottom: 5em;
+
+        .form_title{
+            font-family: "shrikhand regular", sans-serif;
+            font-size: 30px;
+        }
+
+            .form_framing{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+                .form_text{
+                    margin: 10px;
+                    background-color: $color-white;
+                    color: $color-primary;
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    border: none;
+                    position: relative;
+                    padding: 15px;
+                    border-radius: 10px;
+                    width: 15em;
+                }
+
+                    .form_text_adress{
+                        margin: 10px;
+                        background-color: $color-white;
+                        color: $color-primary;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        border: none;
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 10px;
+                        width: 34em;
+                    }
+}
+/***Page formulaire***/
+
+/***Confirmation de la commande***/
+#order_confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    background: $color-grey-light;
+
+        .order_confirmation--title{
+            font-family: "shrikhand regular", sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+            .order_confirmation--size{
+                text-align: center;
+                font-size: 1.5em
+            }
+}

@@ -20,11 +20,12 @@
 
                 <!--Header-->
                 <header id="header">
-                    <!--Bouton retour vers page d'accueil-->
                     <div class="header_framing">
-                        <div>
-                            <a href="index.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
-                        </div>
+                        
+                        <!--Bouton retour vers page d'accueil-->
+                        <a href="home_page.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
+                        <!--Bouton retour vers page d'accueil-->
+
                         <!--Menu de navigation-->
                         <div class="header_navigation">
                             <nav class="header_navigation_menu">
@@ -37,9 +38,7 @@
                     </div>
                     <!--Logo-->
                     <div class="header_logo">
-                        <div>
-                            <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
-                        </div>
+                        <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
                     </div>                  
                 </header>
                 <!--Header-->
@@ -59,10 +58,24 @@
                                     </div>
                             </div>
                         </section>
+                        <!--Image en-tête-->
+
+                        <!--Composer votre menu-->
+                        <section>
+                            <div class="operation">
+                                <div class="operation_number">
+                                    <p>2</p>
+                                </div>
+                                <div class="operation_number-choice">
+                                    <i class="fas fa-mobile-alt fa-2x icone"></i>
+                                    <h3 class="operation_number-choice--title">Composez votre menu</h3>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Composer votre menu-->
 
                         <!--Menu-->
                         <section id="menu">
-                            <div class="menu_framing">
                                 <!--Starter-->
                                 <div class="box_framing">
                                     <h2>Entrées</h2>
@@ -175,33 +188,37 @@
                         </section>
 
                         <!--Finaliser commande-->
+                        <!--div déguster au restaurant-->
                         <section>
-                            <!--div déguster au restaurant-->
-                            <div class="number">
-                                <p class="operation_number">3</p>
+                            <div class="operation">
+                                <div class="operation_number">
+                                    <p>3</p>
+                                </div>
+                                <div class="operation_number-choice">
+                                    <i class="fas fa-mobile-alt fa-2x icone"></i>
+                                    <h3 class="operation_number-choice--title">Dégustez au restaurant</h3>
+                                </div>
                             </div>
-                            <div class="choice">
-                                <i class="fas fa-store fa-2x icone"></i>
-                                <h3 class="operation_div">Déguster au restaurant</h3>
-                            </div>
-                            <!--div déguster au restaurant-->
+                        </section>
+                        <!--div déguster au restaurant-->
 
+                        <!--Option déplacement-->
+                        <section>
                             <!--Choix-->
-                            <form method="POST" action="#">
-                                <p class="form_fraiming--payment">
-                                    <input type="checkbox" name="sur place" class="form_text" /> <label for="sur place">Sur place</label>
-                                    <input type="checkbox" name="vente a emporter" class="form_text" /> <label for="vente a emporter">Vente à emporter</label>
-                                    <input type="checkbox" name="livraison" class="form_text" /> <label for="livraison">Livraison à domicile</label>
-                                </p>
-                            </form>
+                            <div class="order">
+                                <button type="button" class="button">Sur place</button>
+                                <button type="button" class="button">Vente à emporter</button>
+                                <button type="button" class="button">Livraison à domicile</button>
+                            </div>                          
                             <!--Choix-->
                         </section>
+                        <!--Option déplacement-->
                         <!--Finaliser commande-->
 
                         <!--Bouton-->
                         <section>
                             <div class="order">
-                                <button type="button" class="button">Commander</button>
+                                <a href="form_page.html"><button type="button" class="button">Commander</button></a>
                             </div>
                         </section>
                         <!--Bouton-->

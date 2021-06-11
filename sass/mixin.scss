@@ -38,34 +38,10 @@
     cursor: pointer;
 }
 
-@mixin movement_box {
-    transform: scale(1.03);
-    transition: transform 400ms ease-in-out;
-    background: transparent;
-    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
-    cursor: pointer;
-}
-
-@mixin apparition_fraiming_box {
-    animation: apparition 3s linear;
-    transition-delay: 4s;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(10px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }  
-}
-
 @mixin box_apparition_1 {
-    animation: apparition 3s linear;
+    animation: apparition 2.5s cubic-bezier(1,.01,.68,.43);
     animation-fill-mode: both;
+    transition-delay: 2s;
 
     @keyframes apparition {
         0%{
@@ -81,8 +57,9 @@
 }
 
 @mixin box_apparition_2 {
-    animation: apparition 3s linear;
+    animation: apparition 3s cubic-bezier(1,.01,.68,.43);
     animation-fill-mode: both;
+    transition-delay: 2.5s;
 
     @keyframes apparition {
         0%{
@@ -98,8 +75,9 @@
 }
 
 @mixin box_apparition_3 {
-    animation: apparition 3s linear;
+    animation: apparition 3.5s cubic-bezier(1,.01,.68,.43);
     animation-fill-mode: both;
+    transition-delay: 3s;
 
     @keyframes apparition {
         0%{
@@ -132,7 +110,7 @@
 
 @mixin box_hover {
     transform: scale(1.03);
-    transition: transform 400ms ease-in-out;
+    transition: transform 100ms ease;
     background: transparent;
     box-shadow: 0px 7px 10px 0px $box-shadow-darken;
     cursor: pointer;

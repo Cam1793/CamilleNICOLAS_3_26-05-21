@@ -640,7 +640,7 @@ main{
     @include box;
     @include box_apparition_3;
 
-    .dessert_box:hover{
+    &:hover{
         @include box_hover;
     }
 }

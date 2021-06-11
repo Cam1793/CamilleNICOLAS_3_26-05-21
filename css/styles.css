@@ -6,99 +6,62 @@
 /***Main**/
 /***Variables et Mixins**/
 /****loading-spinner****/
-.loading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: linear-gradient(60deg, #ff79da, #9356dc);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  -webkit-animation: disparition 4s ease-in;
-          animation: disparition 4s ease-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
+/*.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient( 60deg, $color-secondary, $color-primary);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    animation: disparition 2s ease-in;
+    animation-fill-mode: both;
 
-@-webkit-keyframes disparition {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 0;
-  }
+    @keyframes disparition{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            z-index: 0;
+        }
+    }
 }
+.loading_spinner{
+        display: flex;
+        justify-content: center;
+        border: solid 10px;
+        border-top-color: #9356dc;
+        border-bottom-color: #ff79da ;
+        border-left-color: #99e2d0;
+        border-right-color: #99e2d0;
+        border-radius: 25%;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        animation: loading 1.5s ease-in-out infinite;
 
-@keyframes disparition {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 0;
-  }
+        @keyframes loading {
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    
+        .icone_onglet{
+            width: 80px;
+        }
 }
-
-.loading_spinner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: solid 10px;
-  border-top-color: #9356dc;
-  border-bottom-color: #ff79da;
-  border-left-color: #99e2d0;
-  border-right-color: #99e2d0;
-  border-radius: 25%;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  -webkit-animation: loading 1.5s ease-in-out infinite;
-          animation: loading 1.5s ease-in-out infinite;
+.loading_text{
+    font-family: "shrikhand regular", sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    padding: 20px;
+    color:$color-white ;
 }
-
-@-webkit-keyframes loading {
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-@keyframes loading {
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-.loading_spinner .icone_onglet {
-  width: 80px;
-}
-
-.loading_text {
-  font-family: "shrikhand regular", sans-serif;
-  font-size: 3em;
-  font-weight: normal;
-  padding: 20px;
-  color: #fff;
-}
-
 /****loading-spinner****/
 /***CSS page de base***/
 body {
@@ -589,7 +552,7 @@ main {
   background: #FF79DA;
   background-image: linear-gradient(177deg, rgba(255, 255, 255, 0) 50%, #9356DC 100%);
   color: rgba(0, 0, 0, 0);
-  -webkit-background-clip: text;
+  background-clip: text;
   font-size: 2rem;
   -webkit-transition: opacity 3s ease-in;
   transition: opacity 3s ease-in;
@@ -802,16 +765,6 @@ main {
   position: relative;
 }
 
-#menu .menu_framing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  position: relative;
-}
-
 #menu .starter_framing {
   width: 300px;
 }
@@ -872,10 +825,10 @@ main {
   cursor: pointer;
   margin-bottom: 30px;
   position: relative;
-  -webkit-animation: apparition 3s linear;
-          animation: apparition 3s linear;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: apparition 3s cubic-bezier(1,.01,.68,.43);
+          animation: apparition 3s cubic-bezier(1,.01,.68,.43);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @-webkit-keyframes apparition {
@@ -904,22 +857,46 @@ main {
   }
 }
 
-.starter_box:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  background: transparent;
-  -webkit-box-shadow: 0px 7px 10px 0px #0c0a0a65;
-          box-shadow: 0px 7px 10px 0px #0c0a0a65;
+.main_dish_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20vw;
+  height: 80px;
+  -webkit-box-shadow: 5px 5px 10px #d3d1d1;
+          box-shadow: 5px 5px 10px #d3d1d1;
+  border-radius: 20px;
+  background-color: #fff;
+  border: none;
   cursor: pointer;
-  background-color: transparent;
-  text-overflow: ellipsis;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-animation: apparition 3s linear;
+          animation: apparition 3s linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
-.main_dish_box {
+@keyframes apparition {
+  0% {
+    -webkit-transform: translatesX(20px);
+            transform: translatesX(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.dessert_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -956,75 +933,6 @@ main {
             transform: translateX(0px);
     opacity: 1;
   }
-}
-
-.main_dish_box:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  background: transparent;
-  -webkit-box-shadow: 0px 7px 10px 0px #0c0a0a65;
-          box-shadow: 0px 7px 10px 0px #0c0a0a65;
-  cursor: pointer;
-  background-color: transparent;
-  text-overflow: ellipsis;
-}
-
-.dessert_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 20vw;
-  height: 80px;
-  -webkit-box-shadow: 5px 5px 10px #d3d1d1;
-          box-shadow: 5px 5px 10px #d3d1d1;
-  border-radius: 20px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 30px;
-  position: relative;
-  -webkit-animation: apparition 3s linear;
-          animation: apparition 3s linear;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
-}
-
-@keyframes apparition {
-  0% {
-    -webkit-transform: translatesX(20px);
-            transform: translatesX(20px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-.dessert_box:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  background: transparent;
-  -webkit-box-shadow: 0px 7px 10px 0px #0c0a0a65;
-          box-shadow: 0px 7px 10px 0px #0c0a0a65;
-  cursor: pointer;
-  background-color: transparent;
-  text-overflow: ellipsis;
 }
 
 /***Menu***/

@@ -63,27 +63,9 @@
     }  
 }
 
-@mixin apparition_box_1 {
-    animation: apparition 3s linear;
-    animation-delay: 3s ;
-
-    @keyframes apparition {
-        0%{
-            transform: translatesX(10px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        
-    }
-}
-
-@mixin apparition_box_2 {
+@mixin box_apparition_1 {
     animation: apparition 3s linear;
     animation-fill-mode: both;
-    animation-delay: 3.5s;
 
     @keyframes apparition {
         0%{
@@ -98,10 +80,26 @@
     }
 }
 
-@mixin apparition_box_3 {
+@mixin box_apparition_2 {
     animation: apparition 3s linear;
     animation-fill-mode: both;
-    animation-delay: 4.5s;
+
+    @keyframes apparition {
+        0%{
+            transform: translatesX(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        
+    }
+}
+
+@mixin box_apparition_3 {
+    animation: apparition 3s linear;
+    animation-fill-mode: both;
 
     @keyframes apparition {
         0%{
@@ -128,6 +126,17 @@
     cursor: pointer;
     margin-bottom: 30px;
     position: relative;
+    z-index: 1;
+
+}
+
+@mixin box_hover {
+    transform: scale(1.03);
+    transition: transform 400ms ease-in-out;
+    background: transparent;
+    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 @mixin icone {

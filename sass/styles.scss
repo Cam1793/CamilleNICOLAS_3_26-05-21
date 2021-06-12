@@ -242,6 +242,11 @@ main{
                 .icone{
                     @include icone;
                 }
+
+                    & :hover{
+                        background-color:#e4daf0;
+                        transition: 0.4s ease-in-out;
+                    }
 }
 
 //**barre de recherche**//
@@ -402,10 +407,42 @@ main{
                                 }
 }
 
-.like{
+.home_page_like{
     position: absolute;
     box-sizing: border-box;
-    margin-left: 25%;
+    margin-left: 90%;
+    top: 30px;
+
+        .default_icone{
+            position: absolute;
+            border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
+        }
+
+        .hover_icone{
+            position: relative;
+            color: linear-gradient( 60deg, $color-secondary, $color-primary);
+
+            .hover_icone:hover{
+                animation: heart 2s linear;
+        
+                @keyframes heart {
+                    0%{
+                        opacity: 0;
+                        transition-delay: 1s;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+            }
+        
+        }
+}
+
+.menu_like{
+    position: absolute;
+    box-sizing: border-box;
+    margin-left: 30%;
     top: 45px;
 
         .default_icone{
@@ -464,6 +501,8 @@ main{
     width: 100%;
     margin-bottom: 5em;
     position: relative;
+    background-color: $color-grey-light;
+    padding: 30px 0px 50px 0px;
 }
 
 .title_dish{

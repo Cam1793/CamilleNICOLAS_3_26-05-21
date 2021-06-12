@@ -372,6 +372,12 @@ main {
   color: #9356dc;
 }
 
+.operation :hover {
+  background-color: #e4daf0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
 .search_bar {
   width: 25%;
   height: 3em;
@@ -570,25 +576,25 @@ main {
   color: black;
 }
 
-.like {
+.home_page_like {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 25%;
-  top: 45px;
+  margin-left: 90%;
+  top: 30px;
 }
 
-.like .default_icone {
+.home_page_like .default_icone {
   position: absolute;
   border-color: linear-gradient(60deg, #ff79da, #9356dc);
 }
 
-.like .hover_icone {
+.home_page_like .hover_icone {
   position: relative;
   color: linear-gradient(60deg, #ff79da, #9356dc);
 }
 
-.like .hover_icone .hover_icone:hover {
+.home_page_like .hover_icone .hover_icone:hover {
   -webkit-animation: heart 2s linear;
           animation: heart 2s linear;
 }
@@ -602,6 +608,40 @@ main {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu_like {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 30%;
+  top: 45px;
+}
+
+.menu_like .default_icone {
+  position: absolute;
+  border-color: linear-gradient(60deg, #ff79da, #9356dc);
+}
+
+.menu_like .hover_icone {
+  position: relative;
+  color: linear-gradient(60deg, #ff79da, #9356dc);
+}
+
+.menu_like .hover_icone .hover_icone:hover {
+  -webkit-animation: heart 2s linear;
+          animation: heart 2s linear;
 }
 
 @keyframes heart {
@@ -662,6 +702,8 @@ main {
   width: 100%;
   margin-bottom: 5em;
   position: relative;
+  background-color: #eaeaea;
+  padding: 30px 0px 50px 0px;
 }
 
 .title_dish {

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,oBAAoB;AAapB,qBAAqB",
+    "mappings": "AAAA,oBAAoB;AAcpB,qBAAqB",
     "sources": [
         "../sass/variable.scss"
     ],

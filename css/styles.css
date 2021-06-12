@@ -373,7 +373,7 @@ main {
 }
 
 .operation :hover {
-  background-color: #fcb2e7;
+  background-color: #e4daf0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }

@@ -3,7 +3,17 @@
 @import 'mixin.scss';
 /***Variables et Mixins**/
 
-/****loading-spinner****/
+/***CSS page de base***/
+body{
+    @include body;
+}
+
+main{
+    @include main;
+}
+/***CSS page de base***/
+
+///**loading-spinner**///
 .loading{
     display: flex;
     align-items: center;
@@ -60,23 +70,9 @@
     padding: 20px;
     color:$color-white ;
 }
-/****loading-spinner****/
+///**loading-spinner**///
 
-/***CSS page de base***/
-body{
-    @include body;
-}
-
-main{
-    @include main;
-}
-/***CSS page de base***/
-
-
-
-//***Index***////
-
-/****header****/
+///****header****///
 #header{
     display: flex;
     flex-direction: column;
@@ -91,7 +87,7 @@ main{
         padding: 5em;
     }
 }
-/***Menu de navigation***/
+/*Menu de navigation*/
 .header_navigation{
     display: flex;
     justify-content: flex-end;
@@ -126,9 +122,27 @@ main{
                         text-decoration: underline;         
                     }           
 }
-/****header****/
 
-/***Intro***/
+.header_framing{
+    display: flex;
+    margin-top: 30px;
+}
+.back_to_home_page{
+    font-size: 3em;
+    color: $color-black;
+    margin-left: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover{
+        color:$color-tertiary;
+        transition: opacity, 300ms;
+    }
+}
+
+
+/*Intro*/
 #home_page_intro{
     background: $color-grey-light;
     width: 100%;
@@ -156,7 +170,7 @@ main{
             }
     }
 }
-/***button***/
+/**button**/
 .btn_home_page{
     padding: 2em;
 
@@ -185,15 +199,8 @@ main{
         }
     }
 }
-/***button***/
 
-//***Index***////
-
-
-
-////***Page accueil restaurant***////
-
-/***Operation***/
+//**Operation**//
 .operation{
     margin: 3em 0em 4em 0em;
     display: flex;
@@ -236,9 +243,8 @@ main{
                     @include icone;
                 }
 }
-/***Operation***/
 
-/***barre de recherche**/
+//**barre de recherche**//
 .search_bar{
     width: 25%;
     height: 3em;
@@ -268,10 +274,9 @@ main{
             font-size: 1.3em;
         }
 }
-/***barre de recherche**/
 
 
-/***Les plus populaires***/
+//**Les plus populaires**//
 #trending{
     width: 100%;
     margin: 50px;
@@ -296,9 +301,8 @@ main{
                     object-fit: cover;
                 }
 }
-/***Les plus populaires***/
 
-/***Restaurants***/
+//**Restaurants**//
 #restaurants{
     width: 100%;
     align-items: center;
@@ -328,7 +332,7 @@ main{
                 }
 }
 
-/**cart restaurants**/
+/*cart restaurants*/
 .restaurant_cart{
     width: 25vw;
     min-width: 150px;
@@ -398,45 +402,338 @@ main{
                                 }
 }
 
-.like {
+.like{
     position: absolute;
     box-sizing: border-box;
-    margin-left:70%;
+    margin-left: 25%;
+    top: 45px;
 
-    & .default_icone{
-        position: absolute;
-        background:transparent;
-        font-size: 2rem;  
-        color: grey;
-
-        & :hover{
-            position: relative;
+        .default_icone{
+            position: absolute;
+            border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
         }
+
+        .hover_icone{
+            position: relative;
+            color: linear-gradient( 60deg, $color-secondary, $color-primary);
+
+            .hover_icone:hover{
+                animation: heart 2s linear;
+        
+                @keyframes heart {
+                    0%{
+                        opacity: 0;
+                        transition-delay: 1s;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+            }
+        
+        }
+
+}         
+//**Image header**//
+.cart_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .picture_header{
+        height: 30em;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.img_title_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "shrikhand regular", sans-serif;
+    position: relative;
+}
+
+//**Menu**//
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5em;
+    position: relative;
+}
+
+.title_dish{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    width: 100%;
+    overflow: hidden;
+
+    &--name{
+        margin: 0;
+        font-size: 1.4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
-        & .hover_icone{
-            background-color:transparent; 
-            font-size: 2.3rem;
+        &--ingredient{
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+}
+        
+.price{
+    display: flex;
+    align-items: flex-end;
+    font-size: 18px;
+    padding: 10px;
+    animation: check_box_price ease .3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    min-width: 50px;
+
+    &:hover{
+        @keyframes check_box_price {
+            0% {
+              transform: translate(50px, 0);
+            }
+          
+            40% {
+              transform: translate(25px, 0);
+            }
+          
+            70% {
+              transform: translate(12px, 0);
+            }
+          
+            100% {
+              transform: translate(1px, 0);
+            }
+          }
+    }
+  
+    &_dish{
+        margin: 0;
+    }
+}
+
+.selec_dish{
+    animation: selec_dish ease .3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+
+    &:hover{
+        display: block;
+
+        @keyframes selec_dish {
+            0% {
+              opacity: .5;
+              transform: translate(50px, 0);
+            }
+          
+            20% {
+              opacity: .6;
+              transform: translate(30px, 0);
+            }
+          
+            40% {
+              opacity: .7;
+              transform: translate(20px, 0);
+            }
+          
+            60% {
+              opacity: .8;
+              transform: translate(15px, 0);
+            }
+          
+            80% {
+              opacity: .9;
+              transform: translate(7px, 0);
+            }
+          
+            100% {
+              opacity: 1;
+              transform: translate(1px, 0);
+            }
+          }
+    }
+}
+
+.check_box_icone{
+    animation: check_box_icone ease .5s;
+    animation-iteration-count: 1;
+    background-color: $color-tertiary;
+    color: $color-white;
+    position: absolute;
+
+    &:hover{
+        @keyframes check_box_icone {
+            10% {
+            transform: rotate(-90deg);
+            }
+        
+            20% {
+            transform: rotate(-75deg) scale(1.03);
+            }
+        
+            40% {
+            transform: rotate(-60deg) scale(1.08);
+            }
+        
+            60% {
+            transform: rotate(-45deg) scale(1.15);
+            }
+        
+            80% {
+            transform: rotate(-30deg) scale(1.08);
+            }
+        
+            100% {
+            transform: rotate(5deg) scale(1);
+            }
+        }
+    } 
+}
+
+.starter_box{
+    @include menu_box;
+    @include box_apparition_1;   
+
+    &:hover{
+        overflow: initial;
+    }
+}
+
+.main_dish_box{
+    @include menu_box;
+    @include box_apparition_2;   
+}
+
+.dessert_box{
+    @include menu_box;
+    @include box_apparition_3;
+}
+
+//**Boutton Commander**//
+.order{
+    text-align: center; 
+    margin-bottom: 50px;
+    position: relative;
+
+    .button{
+        color: $color-primary;
+        border-radius: 2em;
+        border: solid 1px $color-primary;
+        font-size: 1.5em;
+        font-weight: 600;
+        width: 270px;
+        height: 60px;
+        box-shadow: 0px 7px 10px -6px $box-shadow;
+        margin: 20px 0px 20px 30px;
+        text-align: center;
+        transition: transform 400ms ease-in-out;
+
+        &:hover{
+            @include movement_btn;
         }
 
-            & .hover_icone:hover{
-                position: absolute;
-                opacity: 0;
-                background: #FF79DA;
-                background-image: linear-gradient(177deg, rgba(255, 255, 255, 0) 50%, #9356DC 100%);
-                color: rgba(0, 0, 0, 0);
-                background-clip: text;
-                font-size: 2rem;
-                transition: opacity 3s ease-in;
-                cursor: pointer;
-            }         
+        &:focus{
+            background: linear-gradient($color-primary, $color-tertiary);
+            color: $color-white;
+        }
+    }
 }
-             
-/**cart restaurants**/
 
-/***Restaurants***/
+//**Page formulaire**//
+#form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: $color-grey-light;
+    margin-bottom: 5em;
 
-/***Footer***/
+        .form_title{
+            font-family: "shrikhand regular", sans-serif;
+            font-size: 30px;
+        }
+
+            .form_framing{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+                .form_text{
+                    margin: 10px;
+                    background-color: $color-white;
+                    color: $color-primary;
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    border: none;
+                    position: relative;
+                    padding: 15px;
+                    border-radius: 10px;
+                    width: 15em;
+                }
+
+                    .form_text_adress{
+                        margin: 10px;
+                        background-color: $color-white;
+                        color: $color-primary;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        border: none;
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 10px;
+                        width: 34em;
+                    }
+}
+
+
+//**Confirmation de la commande**//
+#order_confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    background: $color-grey-light;
+
+        .order_confirmation--title{
+            font-family: "shrikhand regular", sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+            .order_confirmation--size{
+                text-align: center;
+                font-size: 1.5em
+            }
+}
+
+//**Footer**//
 #information{
     width: 100%;
     display: flex;
@@ -486,267 +783,4 @@ main{
            @include icone;
         }
     }
-}
-/***Footer***/
-
-/***Page accueil restaurant***/
-
-
-
-
-/***Page Menu***/
-
-/***Header***/
-.header_framing{
-    display: flex;
-    margin-top: 30px;
-}
-.back_to_home_page{
-    font-size: 3em;
-    color: $color-black;
-    margin-left: 40px;
-    margin-top: 10px;
-    cursor: pointer;
-    text-decoration: none;
-
-    &:hover{
-        color:$color-tertiary;
-        transition: opacity, 300ms;
-    }
-}
-/***Top-header***/
-
-/***Image header***/
-.cart_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .picture_header{
-        height: 30em;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-.img_title_header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-family: "shrikhand regular", sans-serif;
-    position: relative;
-}
-.icone_heart{
-    font-size: 1em;
-    width: 80px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    
-    .icone_bf{
-        position: absolute;
-        border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
-    }
-    
-    .icone_af{
-        position: absolute;
-        color: linear-gradient( 60deg, $color-secondary, $color-primary);
-    }
-
-    .icone_af:hover{
-        position: relative;
-        transition-property: background;
-        animation: heart 2s linear;
-
-        @keyframes heart {
-            0%{
-                opacity: 0;
-                transition-delay: 1s;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-    }
-
-}
-/***Image header***/
-
-/***Menu***/
-#menu{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 5em;
-    position: relative;
-
-        .starter_framing{
-            width: 300px;
-        }
-        
-            .main_dish_framing{
-                width: 350px;
-            }
-        
-                .dessert_framing{
-                    width: 300px;
-                }
-
-                    .title_dish{
-                        margin: 10px 0px 0px 10px;
-                        font-size: 1.4em;
-                    }
-                
-                        .name_dish{
-                            display: flex;
-                            justify-content: space-between;
-                            padding: 0px 20px 0px 10px;
-                            align-items: center;
-                        }
-                
-                            .name_with_dish{
-                                margin: 0;
-                                font-size: 1.3em;
-                                font-weight: normal;
-                                white-space: nowrap;
-                                text-overflow: clip;
-                            }
-                
-                                .price{
-                                    font-size: 1.3em;
-                                }
-}
-
-.starter_box{
-    @include box;
-    @include box_apparition_1;
-
-    &:hover{
-        @include box_hover;
-    }
-}
-
-.main_dish_box{
-    @include box;
-    @include box_apparition_2;
-    
-    &:hover{
-        @include box_hover;
-}
-}
-
-.dessert_box{
-    @include box;
-    @include box_apparition_3;
-
-    &:hover{
-        @include box_hover;
-    }
-}
-/***Menu***/
-
-/***Boutton Commander***/
-.order{
-    text-align: center; 
-    margin-bottom: 50px;
-    position: relative;
-
-    .button{
-        color: $color-primary;
-        border-radius: 2em;
-        border: solid 1px $color-primary;
-        font-size: 1.5em;
-        font-weight: 600;
-        width: 270px;
-        height: 60px;
-        box-shadow: 0px 7px 10px -6px $box-shadow;
-        margin: 20px 0px 20px 30px;
-        text-align: center;
-        transition: transform 400ms ease-in-out;
-
-        &:hover{
-            @include movement_btn;
-        }
-
-        &:focus{
-            background: linear-gradient($color-primary, $color-tertiary);
-            color: $color-white;
-        }
-    }
-}
-/***Boutton Commander***/
-/***Page Menu***/
-
-
-/***Page formulaire***/
-#form{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: $color-grey-light;
-    margin-bottom: 5em;
-
-        .form_title{
-            font-family: "shrikhand regular", sans-serif;
-            font-size: 30px;
-        }
-
-            .form_framing{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-            }
-
-                .form_text{
-                    margin: 10px;
-                    background-color: $color-white;
-                    color: $color-primary;
-                    font-weight: bold;
-                    font-size: 1.1em;
-                    border: none;
-                    position: relative;
-                    padding: 15px;
-                    border-radius: 10px;
-                    width: 15em;
-                }
-
-                    .form_text_adress{
-                        margin: 10px;
-                        background-color: $color-white;
-                        color: $color-primary;
-                        font-size: 1.1em;
-                        font-weight: bold;
-                        border: none;
-                        position: relative;
-                        padding: 15px;
-                        border-radius: 10px;
-                        width: 34em;
-                    }
-}
-/***Page formulaire***/
-
-/***Confirmation de la commande***/
-#order_confirmation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 50px;
-    background: $color-grey-light;
-
-        .order_confirmation--title{
-            font-family: "shrikhand regular", sans-serif;
-            font-size: 2.5em;
-            text-align: center;
-        }
-
-            .order_confirmation--size{
-                text-align: center;
-                font-size: 1.5em
-            }
 }

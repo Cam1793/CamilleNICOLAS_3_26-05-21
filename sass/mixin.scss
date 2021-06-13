@@ -25,13 +25,12 @@
 }
 
 
-/*police*/
+/*Police*/
 @mixin shrikhand {
     font-family: "shrikhand regular", sans-serif; ;
 }
 
-
-/*loading spinner*/
+/*Loading spinner*/
 @mixin loading {
     display: flex;
     align-items: center;
@@ -233,10 +232,6 @@
     cursor: pointer;
 }
 
-@mixin button_focus {
-    
-}
-
 /*Operation*/
 @mixin operation_box_shadow {
     display: flex;
@@ -351,7 +346,6 @@
     object-fit: cover;
 }
 
-
 /*Restaurants*/
 @mixin restaurants {
     width: 100%;
@@ -381,7 +375,6 @@
 @mixin restaurants_link {
     text-decoration: none;
 }
-
 
 @mixin restaurant_card {
     width: 25vw;
@@ -475,12 +468,12 @@
 
 @mixin default_icone {
     position: absolute;
-    background: $background-color;
+    color: $background-color;
 }
 
 @mixin hover_icone {
     position: absolute;
-    background: $background-color; 
+    color: $background-color; 
 }
 
 @mixin anim_hover_like{
@@ -718,7 +711,6 @@
     font-size: 1.5em
 }
 
-
 /*Footer*/
 @mixin information {
     width: 100%;
@@ -728,6 +720,7 @@
     padding: 20px 0px 20px 0px;
     position: relative;
 }
+
 @mixin information_logo {
     display: flex;
     justify-content: center;

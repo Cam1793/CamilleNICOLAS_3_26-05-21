@@ -12,23 +12,10 @@ body{
 main{
     @include main;
 }
-/***CSS page de base***/
 
 ///**loading-spinner**///
 .loading{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: linear-gradient( 60deg, $color-secondary, $color-primary);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    animation: disparition 2s ease-in;
-    animation-fill-mode: both;
+    @include loading;
 
     @keyframes disparition{
         0%{
@@ -41,19 +28,8 @@ main{
     }
 }
 .loading_spinner{
-        display: flex;
-        justify-content: center;
-        border: solid 10px;
-        border-top-color: #9356dc;
-        border-bottom-color: #ff79da ;
-        border-left-color: #99e2d0;
-        border-right-color: #99e2d0;
-        border-radius: 25%;
-        position: relative;
-        width: 80px;
-        height: 80px;
-        animation: loading 1.5s ease-in-out infinite;
-
+        @include loading_spinner;
+        
         @keyframes loading {
             to{
                 transform: rotate(1turn);
@@ -65,212 +41,114 @@ main{
         }
 }
 .loading_text{
-    font-family: "shrikhand regular", sans-serif;
-    font-size: 3em;
-    font-weight: normal;
-    padding: 20px;
-    color:$color-white ;
+    @include shrikhand;
+    @include loading_text;
 }
-///**loading-spinner**///
 
 ///****header****///
 #header{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-    box-shadow: 0px 4px 10px 4px $box-shadow;
-    z-index: 1;
+    @include header;
 
     .header_logo{
-        display: flex;
-        justify-content: center;
-        padding: 5em;
+        @include header_logo;
     }
 }
 /*Menu de navigation*/
 .header_navigation{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    @include header_navigation;
     
     .header_navigation_menu{
-        width: 30%;
+        @include header_navigation_menu;
     }
 
         .header_navigation_menu--list{
-            font-size: 1.8em;
-            height: 50px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            @include header_navigation_menu--list;
             
         }
 
             a{
-                text-decoration: none;
-                position: relative;
+                @include a;
             }
 
                 .header_navigation_menu--list--link{
-                    list-style-type: none;
-                    font-family: "shrikhand regular", sans-serif;
-                    color: $color-primary;
-                    position: relative;
+                    @include header_navigation_menu--list--link;
                 }
 
                     a.header_navigation_menu--list--link:hover{
-                        position: relative;
-                        text-decoration: underline;         
+                        @include navigatoin_hover;     
                     }           
 }
 
 .header_framing{
-    display: flex;
-    margin-top: 30px;
+    @include header_framing;
 }
 
 .back_to_home_page{
-    font-size: 3em;
-    color: $color-black;
-    margin-left: 40px;
-    margin-top: 10px;
-    cursor: pointer;
-    text-decoration: none;
+    @include back_btn;
 
     &:hover{
-        color:$color-tertiary;
-        transition: opacity, 300ms;
+        @include back_btn--hover;
     }
 }
 
 //**Image header**//
-.cart_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card_img{
+    @include card_img;
 
     .picture_header{
-        height: 30em;
-        width: 100%;
-        object-fit: cover;
+        @include img_picture;
     }
 }
 
 .img_title_header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-family: "shrikhand regular", sans-serif;
-    position: relative;
+    @include img_title_header;
 }
 
 /*Intro*/
 #home_page_intro{
-    background: $color-grey-light;
-    width: 100%;
+   @include home_page_intro;
 
     .home_page_intro_framing{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include intro_framing;
 
             .site_title{
-                width: 100%;
-                font-size: 4.5em;
-                font-weight: normal;
-                font-family: "shrikhand regular", sans-serif;
-                text-align: center;
+                @include title_site;
             }
 
-            .introduction{
-                width: 100%;
-                font-size: 2em;
-                font-weight: normal;
-                text-align: center;
-            }
+                .introduction{
+                    @include intro;
+                }
     }
 }
 /**button**/
 .btn_home_page{
-    padding: 2em;
+    @include button_home_page;
 
     .button{
-        color: $color-primary;
-        border-radius: 2em;
-        border: solid 1px $color-primary;
-        font-size: 1.5em;
-        font-weight: 600;
-        width: 270px;
-        height: 60px;
-        box-shadow: 0px 7px 10px -6px $box-shadow;
-        margin-bottom: 40px;
-        text-align: center;
-        transition: transform 400ms ease-in-out;
-        position: relative;
+        @include button;
         
         &:hover{
-            transform: scale(1.09);
-            transition: transform 400ms ease-in-out;
-            background: linear-gradient($color-secondary, $color-primary);
-            transition-delay: 150ms;
-            box-shadow: 0px 7px 10px 0px $box-shadow;
-            color: $color-white ;
-            cursor: pointer;
+            @include button_hover;
         }
     }
 }
 
 //**Operation**//
 #operation_box_shadow{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-shadow: 0px 4px 7px 4px $box-shadow;
-    z-index: 1; 
+    @include operation_box_shadow; 
 }
 
 .operation{
-    margin: 3em 0em 4em 0em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 35em;
-    position: relative;
+    @include operation;
 
     .operation_number{
-        border-radius: 50px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 0;
-        width: 50px;
-        height: 45px;
-        margin-right: -0.8em;
-        background-color: $color-primary;
-        color: $color-white;
-        z-index: 2;
+        @include operation_number;
     }
         .operation_number--choice{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 2em;
-            font-size: 1.2em;
-            width: 100%;
-            padding: 10px 10px 10px 40px;
-            background-color: #eaeaea;
-            box-shadow: 0px 7px 10px -6px $box-shadow;
+            @include operation_choice;
         }
             .operation_number--choice--title{
-                font-size: 1.5em;
-                margin-left: 20px;
+                @include operation_title;
             }
 
                 .icone{
@@ -278,209 +156,112 @@ main{
                 }
 
                     & :hover{
-                        background-color:#e4daf0;
-                        transition: 0.4s ease-in-out;
+                        @include operation_hover;
                     }
 }
 
 //**barre de recherche**//
 .search_bar{
-    width: 25%;
-    height: 3em;
-    margin-top: 50px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-grey-light;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px 4px $box-shadow;
+    @include search_bar;
 
     .search_bar-input{
-        width: 200px;
-        height: 2em;
-        background-color: transparent;
-        border: none;
-        font-size: 1.1em;
-        color: $color-primary;
-        text-align: center;
-        margin-left: 10px;
-        position: relative;
+        @include search_bar_input;
     }
 
         .fa-map-marker-alt{
-            color: $color-primary;
-            font-size: 1.3em;
+            @include search_bar_icone;
         }
 }
 
 //**Restaurants / Menu **//
 //**Les plus populaires**//
 #trending{
-    width: 100%;
-    margin: 50px;
-    background: $color-grey-light;
+    @include trending;
 
-        .trending_title{
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: normal;
-            font-family: "shrikhand regular", sans-serif;
+    .trending_title{
+        @include trending_title;
+    }
+
+        .trending_framing{
+            @include trending_framing;
         }
 
-            .trending_framing{
-                display: flex;
-                justify-content: space-around;
+            .card_img_1{
+                @include card_img_1;
             }
-
-                .cart_img_1{
-                    width: 100%;
-                    height: 325px;
-                    border-radius: 15px 15px 0px 0px;
-                    object-fit: cover;
-                }
-}
-
-#restaurants{
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 0px 50px 0px;
-
-        .restaurants_title{
-            font-size: 4em;
-            text-align: center;
-            display: flex;
-            font-family: "shrikhand regular", sans-serif;
-            font-weight: normal;
-            margin: 60px 0px 60px 0px;
-        }
-    
-            .restaurants_framing{
-                width: 70%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-                .restaurants_link{
-                    text-decoration: none;
-                }
-}
-
-.restaurant_cart{
-    width: 25vw;
-    height: 90%;
-    border-radius: 15px;
-    margin: 0em 1em 2.5em 0em;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 20px #0000002e;
-    position: relative;
-    background: $color-white;
-    position: relative;
-
-        &:hover{
-            transform: scale(1.05);
-            transition: transform 400ms ease-in-out;
-        }
-    
-            .cart_img{
-                width: 100%;
-                height: 100%;
-                border-radius: 15px 15px 0px 0px;
-                object-fit: cover;   
-            }
-
-                .cart_img_1{
-                    width: 100%;
-                    height: 315px;
-                    border-radius: 15px 15px 0px 0px;
-                    object-fit: cover; 
-                }
-
-                    .cart_img_2{
-                        width: 100%;
-                        height: 315px;
-                        border-radius: 15px 15px 0px 0px;
-                        object-fit: cover;   
-                    }
-
-                    .cart_img_3{
-                        width: 100%;
-                        height: 315px;
-                        border-radius: 15px 15px 0px 0px;
-                        object-fit: cover;   
-                    }
-                        .new{
-                            width: 120px;
-                            height: 35px;
-                            position: absolute;
-                            top: 25px;
-                            right: 25px;
-                            font-size: 1.7em;
-                            font-weight: bold;
-                            background-color: $color-tertiary ;
-                            color: $color-new;
-                            padding-top: 10px;
-                            text-align: center;
-                            border: solid 1px $color-new;
-                            border-radius: 15px;
-                            box-shadow: 0px 0px 15px $color-tertiary ;
-                        }
-            
-                            .card_text{
-                                display: flex;
-                                justify-content: space-between;
-                                position: relative;
-                            }
-            
-                                .restaurant_name{
-                                    margin: 10px;
-                                    padding: 0;
-                                    color: black;
-                                    font-size: 1.5em;
-                                }
-            
-                                    .menu_name{
-                                        font-size: 1.4em;
-                                        font-weight: normal;
-                                        margin: 10px;
-                                        padding: 0;
-                                        color: black;
-                                    }
 }
 
 #menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 2em;
-    position: relative;
-    background-color: $color-grey-light;
-    padding: 50px 0px 50px 0px;
+    @include menu;
+}
+
+#restaurants{
+    @include restaurants;
+
+        .restaurants_title{
+            @include restaurants_title;
+        }
+    
+            .restaurants_framing{
+                @include restaurants_framing;
+            }
+
+                .restaurants_link{
+                    @include restaurants_link;
+                }
+}
+
+.restaurant_card{
+    @include restaurant_card;
+
+        &:hover{
+            @include restaurant_hover;
+        }
+    
+            .card_img{
+                @include card_img; 
+            }
+
+                .card_img_1{
+                    @include card_img_bg;
+                }
+
+                    .card_img_2{
+                        @include card_img_bg;   
+                    }
+
+                        .card_img_3{
+                            @include card_img_bg;
+                        }
+                            .new{
+                                @include new;
+                            }
+                
+                                .card_text{
+                                    @include card_text;
+                                }
+                
+                                    .restaurant_name{
+                                        @include restaurant_name;
+                                    }
+                
+                                        .menu_name{
+                                            @include menu_name;
+                                        }
 }
 
 .home_page_like{
-    position: absolute;
-    box-sizing: border-box;
-    margin-left: 90%;
-    top: 30px;
+    @include home_page_like;
 
         .default_icone{
-            position: absolute;
-            border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
+            @include default_icone;
         }
 
         .hover_icone{
-            position: relative;
-            color: linear-gradient( 60deg, $color-secondary, $color-primary);
+            @include hover_icone;
 
             .hover_icone:hover{
-                animation: heart 2s linear;
+                @include anim_hover_like;
         
                 @keyframes heart {
                     0%{
@@ -497,22 +278,17 @@ main{
 }
 
 .menu_like{
-    position: absolute;
-    box-sizing: border-box;
-    margin-left: 30%;
-    top: 45px;
+    @include menu_like;
 
         .default_icone{
-            position: absolute;
-            border-color: linear-gradient( 60deg, $color-secondary, $color-primary);
+            @include default_icone;
         }
 
         .hover_icone{
-            position: relative;
-            color: linear-gradient( 60deg, $color-secondary, $color-primary);
+            @include hover_icone;
 
             .hover_icone:hover{
-                animation: heart 2s linear;
+                @include anim_hover_like;
         
                 @keyframes heart {
                     0%{
@@ -530,40 +306,19 @@ main{
 }         
 
 .title_dish{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 20px 10px 10px;
-    width: 100%;
-    overflow: hidden;
+    @include dish_title;
 
     &--name{
-        margin: 0;
-        font-size: 1.4em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        @include dish_name;
     }
 
         &--ingredient{
-            margin: 0;
-            font-size: 1.3em;
-            font-weight: normal;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            @include dish_ingredient;
         }
 }
         
 .price{
-    display: flex;
-    align-items: flex-end;
-    font-size: 18px;
-    padding: 10px;
-    animation: check_box_price ease .3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    min-width: 50px;
+    @include price;
 
     &:hover{
         @keyframes check_box_price {
@@ -591,19 +346,9 @@ main{
 }
 
 .selec_dish{
-    animation: selec_dish ease .3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    background-color: $color-tertiary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50px;
-    overflow: hidden;
-    transform-origin: 50% 50%;
+    @include selec_dish;
 
     &:hover{
-        display: block;
 
         @keyframes selec_dish {
             0% {
@@ -640,11 +385,7 @@ main{
 }
 
 .check_box_icone{
-    animation: check_box_icone ease .5s;
-    animation-iteration-count: 1;
-    background-color: $color-tertiary;
-    color: $color-white;
-    position: absolute;
+    @include check_box_icone;
 
     &:hover{
         @keyframes check_box_icone {
@@ -677,11 +418,7 @@ main{
 
 .starter_box{
     @include menu_box;
-    @include box_apparition_1;   
-
-    &:hover{
-        overflow: initial;
-    }
+    @include box_apparition_1;
 }
 
 .main_dish_box{
@@ -696,146 +433,76 @@ main{
 
 //**Boutton Commander**//
 .order{
-    text-align: center; 
-    margin-bottom: 50px;
-    position: relative;
+    @include order;
 
-    .button{
-        color: $color-primary;
-        border-radius: 2em;
-        border: solid 1px $color-primary;
-        font-size: 1.5em;
-        font-weight: 600;
-        width: 270px;
-        height: 60px;
-        box-shadow: 0px 7px 10px -6px $box-shadow;
-        margin: 20px 0px 20px 30px;
-        text-align: center;
-        transition: transform 400ms ease-in-out;
+    .button_order{
+        @include button;
+        margin-right: 50px;
 
         &:hover{
             @include movement_btn;
         }
 
         &:focus{
-            background: linear-gradient($color-primary, $color-tertiary);
-            color: $color-white;
+            @include order_focus;    
         }
     }
 }
 
 //**Page formulaire**//
 #form{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: $color-grey-light;
-    margin-bottom: 5em;
+    @include form;
 
         .form_title{
-            font-family: "shrikhand regular", sans-serif;
-            font-size: 30px;
+            @include form_title;
         }
 
             .form_framing{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
+                @include form_framing;
             }
 
                 .form_text{
-                    margin: 10px;
-                    background-color: $color-white;
-                    color: $color-primary;
-                    font-weight: bold;
-                    font-size: 1.1em;
-                    border: none;
-                    position: relative;
-                    padding: 15px;
-                    border-radius: 10px;
-                    width: 15em;
+                    @include form_text
                 }
 
                     .form_text--adress{
-                        margin: 10px;
-                        background-color: $color-white;
-                        color: $color-primary;
-                        font-size: 1.1em;
-                        font-weight: bold;
-                        border: none;
-                        position: relative;
-                        padding: 15px;
-                        border-radius: 10px;
-                        width: 34em;
+                        @include form_adress;
                     }
 }
 
-
 //**Confirmation de la commande**//
 #order_confirmation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 50px;
-    background: $color-grey-light;
+   @include order_conf;
 
         .order_confirmation--title{
-            font-family: "shrikhand regular", sans-serif;
-            font-size: 2.5em;
-            text-align: center;
+           @include  order_conf_title;
         }
 
             .order_confirmation--size{
-                text-align: center;
-                font-size: 1.5em
+                @include order_conf_size;
             }
 }
 
 //**Footer**//
 #information{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    padding: 20px 0px 20px 0px;
-    position: relative;
+    @include information;
 
         .information_logo{
-            display: flex;
-            justify-content: center;
+            @include information_logo;
         } 
             .information_title{
-                color: $color-white ;
-                font-family: "shrikhand regular", sans-serif;
-                font-size: 3em;
-                margin-bottom: 20px;
-                text-decoration: none;
+                @include information_title;
             }
 }    
 
 .information_box{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    @include info_box;
 
     .information_box--option_list{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
+        @include info_list;
     
         .option{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            text-decoration: none;
-            color: $color-white ;
-            font-size: 1.5em;
-            text-align: center;
+            @include option;
         }
         
         .option:hover{

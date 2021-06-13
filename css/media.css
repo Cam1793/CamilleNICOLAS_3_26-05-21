@@ -3,6 +3,9 @@
 /**mixin**/
 /***Body***/
 /***Main**/
+/*police*/
+/*loading spinner*/
+/*header*/
 @media screen and (max-width: 1199px) {
   .header_navigation .header_navigation_menu {
     width: 40%;
@@ -19,17 +22,17 @@
   #restaurants .restaurants_framing {
     width: 85%;
   }
-  .restaurant_cart {
+  .restaurant_card {
     height: 33em;
     width: 35vw;
   }
-  #trending .cart_img_1 {
+  #trending .card_img_1 {
     height: 27em;
   }
-  .restaurant_cart .cart_img_2 {
+  .restaurant_card .card_img_2 {
     height: 27em;
   }
-  .restaurant_cart .cart_img_3 {
+  .restaurant_card .card_img_3 {
     height: 27em;
   }
 }
@@ -44,18 +47,18 @@
   #restaurants .restaurants_framing {
     width: 95%;
   }
-  .restaurant_cart {
+  .restaurant_card {
     width: 45vw;
     height: 29em;
     margin-bottom: 30px;
   }
-  #trending .cart_img_1 {
+  #trending .card_img_1 {
     height: 23.5em;
   }
-  .restaurant_cart .cart_img_2 {
+  .restaurant_card .card_img_2 {
     height: 23.5em;
   }
-  .restaurant_cart .cart_img_3 {
+  .restaurant_card .card_img_3 {
     height: 23.5em;
   }
   .menu_like {
@@ -189,21 +192,21 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .restaurant_cart {
+  .restaurant_card {
     width: 92vw;
     height: 320px;
     margin: 0em 1em 2.5em 1em;
   }
-  #trending .cart_img_1 {
+  #trending .card_img_1 {
     height: 250px;
   }
-  .restaurant_cart .cart_img {
+  .restaurant_card .card_img {
     height: 250px;
   }
-  .restaurant_cart .cart_img_2 {
+  .restaurant_card .card_img_2 {
     height: 250px;
   }
-  .restaurant_cart .cart_img_3 {
+  .restaurant_card .card_img_3 {
     height: 250px;
   }
   .card_text {

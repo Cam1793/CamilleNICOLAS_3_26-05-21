@@ -449,6 +449,19 @@ main{
     }
 }
 
+.finish{
+    @include order;
+
+    .button_finish{
+        @include button;
+        margin-right: 50px;
+
+        &:hover{
+            @include movement_btn;
+        }
+    }
+}
+
 //**Page formulaire**//
 #form{
     @include form;

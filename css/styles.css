@@ -396,7 +396,7 @@ main {
   z-index: 2;
 }
 
-.operation .operation_number-choice {
+.operation .operation_number--choice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +415,7 @@ main {
           box-shadow: 0px 7px 10px -6px #bdb6b6cb;
 }
 
-.operation .operation_number-choice--title {
+.operation .operation_number--choice--title {
   font-size: 1.5em;
   margin-left: 20px;
 }
@@ -1237,7 +1237,7 @@ main {
   width: 15em;
 }
 
-#form .form_text_adress {
+#form .form_text--adress {
   margin: 10px;
   background-color: #fff;
   color: #9356dc;

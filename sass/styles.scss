@@ -257,7 +257,7 @@ main{
         color: $color-white;
         z-index: 2;
     }
-        .operation_number-choice{
+        .operation_number--choice{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -268,7 +268,7 @@ main{
             background-color: #eaeaea;
             box-shadow: 0px 7px 10px -6px $box-shadow;
         }
-            .operation_number-choice--title{
+            .operation_number--choice--title{
                 font-size: 1.5em;
                 margin-left: 20px;
             }
@@ -759,7 +759,7 @@ main{
                     width: 15em;
                 }
 
-                    .form_text_adress{
+                    .form_text--adress{
                         margin: 10px;
                         background-color: $color-white;
                         color: $color-primary;

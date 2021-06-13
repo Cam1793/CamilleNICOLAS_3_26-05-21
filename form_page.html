@@ -23,10 +23,8 @@
             <!--Header-->
             <header id="header">
                 <!--Bouton retour vers page d'accueil-->
-                <div class="header_framing">
-                    <div>
-                        <a href="home_page.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
-                    </div>
+                <div class="header_framing">               
+                    <a href="home_page.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
                     <!--Menu de navigation-->
                     <div class="header_navigation">
                         <nav class="header_navigation_menu">
@@ -39,7 +37,7 @@
                 </div>
                 <!--Logo-->
                 <div class="header_logo">
-                    <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood"></a>
+                    <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood" class="logo"></a>
                 </div>                  
             </header>
             <!--Header-->
@@ -51,24 +49,24 @@
                     <h1 class="form_title">Quelques informations supplémentaires :</h1>
                         <div class="form_framing">
                             <form method="POST" action="#">
-                                    <p class="form_fraiming--name">
+                                    <div class="form_fraiming--name">
                                         <input type="text" class="form_text" placeholder="Nom"> 
                                         <input type="text" class="form_text" placeholder="Prénom">
-                                    </p>
-                                    <p class="form_fraiming--adress">
-                                        <input type="text" class="form_text_adress" placeholder="Adresse">
-                                    </p>
-                                    <p class="form_fraiming--city">
+                                    </div>
+                                    <div class="form_fraiming--adress">
+                                        <input type="text" class="form_text--adress" placeholder="Adresse">
+                                    </div>
+                                    <div class="form_fraiming--city">
                                         <input type="text" class="form_text" placeholder="Code postal">
                                         <input type="text" class="form_text" placeholder="Ville">
-                                    </p>
-                                    <p class="form_fraiming--phone">
+                                    </div>
+                                    <div class="form_fraiming--phone">
                                         <input type="tel" class="form_text" placeholder="Téléphone fixe">
                                         <input type="tel" class="form_text" placeholder="Mobile">
-                                    </p>
-                                    <p class="form_fraiming--fidelity">
+                                    </div>
+                                    <div class="form_fraiming--premium">
                                         <input type="text" class="form_text" placeholder="Numéro premium (facultatif)">
-                                    </p>
+                                    </div>
                             </form>
                         </div>
                 </section>

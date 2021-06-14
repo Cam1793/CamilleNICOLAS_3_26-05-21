@@ -251,8 +251,7 @@ main{
 }
 
 .home_page_like{
-    position: relative;
-    box-sizing: border-box;
+    @include home_page_like;
 
         .home_page_like .default_icone{
             @include default_icone;

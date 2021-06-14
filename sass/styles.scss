@@ -223,15 +223,15 @@ main{
             }
 
                 .card_img_1{
-                    @include card_img_bg;
+                    @include card_img;
                 }
 
                     .card_img_2{
-                        @include card_img_bg;   
+                        @include card_img;   
                     }
 
                         .card_img_3{
-                            @include card_img_bg;
+                            @include card_img;
                         }
                             .new{
                                 @include new;

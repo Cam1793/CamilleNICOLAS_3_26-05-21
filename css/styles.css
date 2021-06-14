@@ -684,12 +684,12 @@ main {
 
 .home_page_like .default_icone {
   position: absolute;
-  color: linear-gradient(60deg #ff79da, #9356dc);
+  background: #ff79da, #9356dc;
 }
 
 .home_page_like .hover_icone {
   position: absolute;
-  color: linear-gradient(60deg #ff79da, #9356dc);
+  background: #ff79da, #9356dc;
 }
 
 .home_page_like .hover_icone .hover_icone:hover {
@@ -729,12 +729,12 @@ main {
 
 .menu_like .default_icone {
   position: absolute;
-  color: linear-gradient(60deg #ff79da, #9356dc);
+  background: #ff79da, #9356dc;
 }
 
 .menu_like .hover_icone {
   position: absolute;
-  color: linear-gradient(60deg #ff79da, #9356dc);
+  background: #ff79da, #9356dc;
 }
 
 .menu_like .hover_icone .hover_icone:hover {

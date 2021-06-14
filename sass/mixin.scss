@@ -468,12 +468,12 @@
 
 @mixin default_icone {
     position: absolute;
-    color: $background-color;
+    background: $background-color;
 }
 
 @mixin hover_icone {
     position: absolute;
-    color: $background-color; 
+    background: $background-color; 
 }
 
 @mixin anim_hover_like{

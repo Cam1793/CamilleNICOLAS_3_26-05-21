@@ -675,24 +675,25 @@ main {
 }
 
 .home_page_like {
-  position: absolute;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 90%;
-  top: 30px;
 }
 
-.home_page_like .default_icone {
+.home_page_like .home_page_like .default_icone {
+  color: #9d9d9d;
+  font-size: 24px;
+  left: 50%;
+}
+
+.home_page_like .home_page_like .hover_icone {
+  left: 0;
+  opacity: 0;
   position: absolute;
-  background: #ff79da, #9356dc;
+  background: #9356dc;
 }
 
-.home_page_like .hover_icone {
-  position: absolute;
-  background: #ff79da, #9356dc;
-}
-
-.home_page_like .hover_icone .hover_icone:hover {
+.home_page_like .home_page_like .hover_icone .hover_icone:hover {
   -webkit-animation: heart 2s linear;
           animation: heart 2s linear;
 }
@@ -728,13 +729,16 @@ main {
 }
 
 .menu_like .default_icone {
-  position: absolute;
-  background: #ff79da, #9356dc;
+  color: #9d9d9d;
+  font-size: 24px;
+  left: 50%;
 }
 
 .menu_like .hover_icone {
+  left: 0;
+  opacity: 0;
   position: absolute;
-  background: #ff79da, #9356dc;
+  background: #9356dc;
 }
 
 .menu_like .hover_icone .hover_icone:hover {

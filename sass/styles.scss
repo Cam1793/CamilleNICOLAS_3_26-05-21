@@ -251,13 +251,14 @@ main{
 }
 
 .home_page_like{
-    @include home_page_like;
+    position: relative;
+    box-sizing: border-box;
 
-        .default_icone{
+        .home_page_like .default_icone{
             @include default_icone;
         }
 
-        .hover_icone{
+        .home_page_like .hover_icone{
             @include hover_icone;
 
             .hover_icone:hover{

@@ -1,11 +1,24 @@
+@charset "UTF-8";
 /**variante color**/
 /**variante shadow**/
 /**mixin**/
 /***Body***/
 /***Main**/
-/*police*/
-/*loading spinner*/
+/*Police*/
+/*Loading spinner*/
 /*header*/
+/*Img header*/
+/*Présentation et intro*/
+/*Bottons*/
+/*Operation*/
+/*Barre de recherche*/
+/*Trending*/
+/*Restaurants*/
+/*Like home_page card*/
+/*Like page menu*/
+/*Form page*/
+/*Order page*/
+/*Footer*/
 @media screen and (max-width: 1199px) {
   .header_navigation .header_navigation_menu {
     width: 40%;

@@ -252,58 +252,76 @@ main{
 
 .home_page_like{
     @include home_page_like;
+    
 
-        .home_page_like .default_icone{
-            @include default_icone;
+        .default_heart{
+            @include default_heart;
+            
         }
 
-        .home_page_like .hover_icone{
-            @include hover_icone;
-
-            .hover_icone:hover{
-                @include anim_hover_like;
-        
-                @keyframes heart {
-                    0%{
-                        opacity: 0;
-                        transition-delay: 1s;
-                    }
-                    100%{
-                        opacity: 1;
-                    }
-                }
+            .default_icone{
+                @include default_icone;
+                
             }
-        
-        }
-}
+
+                .hover_heart{
+                    @include hover_heart;
+                    
+                }
+
+                    .hover_icone{
+                        @include hover_icone;
+                    }
+            
+                        .hover_icone:hover{
+                            animation: heart 1.8s ease-in-out;
+                            
+
+                            @keyframes heart {
+                                0%{
+                                    opacity: 0;
+                                    
+                                }
+                                100%{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+} 
 
 .menu_like{
     @include menu_like;
 
-        .default_icone{
-            @include default_icone;
+        .default_heart{
+            @include default_heart ;    
         }
 
-        .hover_icone{
-            @include hover_icone;
-
-            .hover_icone:hover{
-                @include anim_hover_like;
-        
-                @keyframes heart {
-                    0%{
-                        opacity: 0;
-                        transition-delay: 1s;
-                    }
-                    100%{
-                        opacity: 1;
-                    }
-                }
+            .default_icone{
+                @include default_icone;
             }
-        
-        }
 
-}         
+                .hover_heart{
+                    @include hover_heart;
+                }
+
+                    .hover_icone{
+                        @include hover_icone;
+                    }
+            
+                        .hover_icone:hover{
+                            animation: heart 1.8s ease-in-out;
+                    
+                            @keyframes heart {
+                                0%{
+                                    opacity: 0;
+                                    
+                                }
+                                100%{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+}
 
 .title_dish{
     @include dish_title;

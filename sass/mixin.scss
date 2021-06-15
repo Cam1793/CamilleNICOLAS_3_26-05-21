@@ -161,6 +161,8 @@
     font-family: "shrikhand regular", sans-serif;
     position: relative;
     margin-top: 4em;
+    width: 100%;
+    cursor: pointer;
 }
 
 /*Présentation et intro*/
@@ -454,33 +456,35 @@
 /*Like home_page card*/
 
 @mixin home_page_like {
-    position: relative;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+@mixin default_heart {
+    position: absolute; 
+    
 }
 
 @mixin default_icone {
-    color: #9d9d9d;
-    font-size: 24px;
-    left: 50%;
+    color: gray;
+}
+
+@mixin hover_heart {
+    position: relative; 
+    
 }
 
 @mixin hover_icone {
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    background: $color-heart; 
-}
-
-@mixin anim_hover_like{
-    animation: heart 2s linear;
+    color: $background-color;
+    opacity: 0;  
 }
 
 /*Like page menu*/
 @mixin menu_like {
-    position: absolute;
-    box-sizing: border-box;
-    margin-left: 120%;
-    top: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
 }
 
 @mixin dish_title {

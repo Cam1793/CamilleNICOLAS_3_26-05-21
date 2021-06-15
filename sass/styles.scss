@@ -149,15 +149,15 @@ main{
         }
             .operation_number--choice--title{
                 @include operation_title;
-            }
-
-                .icone{
-                    @include icone;
+            }   
+                .operation_number--choice:hover{
+                    @include operation_hover;
                 }
-
-                    & :hover{
-                        @include operation_hover;
+                    .icone{
+                        @include icone;
                     }
+
+                    
 }
 
 //**barre de recherche**//
@@ -274,7 +274,7 @@ main{
                     }
             
                         .hover_icone:hover{
-                            animation: heart 1.8s ease-in-out;
+                            animation: heart 2s ease-in-out;
                             
 
                             @keyframes heart {
@@ -309,7 +309,7 @@ main{
                     }
             
                         .hover_icone:hover{
-                            animation: heart 1.8s ease-in-out;
+                            animation: heart 2s ease-in-out;
                     
                             @keyframes heart {
                                 0%{
@@ -318,6 +318,7 @@ main{
                                 }
                                 100%{
                                     opacity: 1;
+                                    
                                 }
                             }
                         }

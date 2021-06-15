@@ -435,15 +435,15 @@ main {
   margin-left: 20px;
 }
 
-.operation .icone {
-  margin-right: 10px;
-  color: #9356dc;
-}
-
-.operation :hover {
+.operation .operation_number--choice:hover {
   background-color: #e4daf0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+}
+
+.operation .icone {
+  margin-right: 10px;
+  color: #9356dc;
 }
 
 .search_bar {
@@ -700,13 +700,13 @@ main {
 }
 
 .home_page_like .hover_icone {
-  color: linear-gradient(#ff79da, #9356dc);
+  color: #9356dc;
   opacity: 0;
 }
 
 .home_page_like .hover_icone:hover {
-  -webkit-animation: heart 1.8s ease-in-out;
-          animation: heart 1.8s ease-in-out;
+  -webkit-animation: heart 2s ease-in-out;
+          animation: heart 2s ease-in-out;
 }
 
 @-webkit-keyframes heart {
@@ -750,13 +750,13 @@ main {
 }
 
 .menu_like .hover_icone {
-  color: linear-gradient(#ff79da, #9356dc);
+  color: #9356dc;
   opacity: 0;
 }
 
 .menu_like .hover_icone:hover {
-  -webkit-animation: heart 1.8s ease-in-out;
-          animation: heart 1.8s ease-in-out;
+  -webkit-animation: heart 2s ease-in-out;
+          animation: heart 2s ease-in-out;
 }
 
 @keyframes heart {

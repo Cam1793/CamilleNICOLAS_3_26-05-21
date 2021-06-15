@@ -276,6 +276,8 @@ main {
   font-family: "shrikhand regular", sans-serif;
   position: relative;
   margin-top: 4em;
+  width: 100%;
+  cursor: pointer;
 }
 
 /*Intro*/
@@ -676,34 +678,40 @@ main {
 }
 
 .home_page_like {
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
 }
 
-.home_page_like .home_page_like .default_icone {
-  color: #9d9d9d;
-  font-size: 24px;
-  left: 50%;
-}
-
-.home_page_like .home_page_like .hover_icone {
-  left: 0;
-  opacity: 0;
+.home_page_like .default_heart {
   position: absolute;
-  background: #9356dc;
 }
 
-.home_page_like .home_page_like .hover_icone .hover_icone:hover {
-  -webkit-animation: heart 2s linear;
-          animation: heart 2s linear;
+.home_page_like .default_icone {
+  color: gray;
+}
+
+.home_page_like .hover_heart {
+  position: relative;
+}
+
+.home_page_like .hover_icone {
+  color: linear-gradient(#ff79da, #9356dc);
+  opacity: 0;
+}
+
+.home_page_like .hover_icone:hover {
+  -webkit-animation: heart 1.8s ease-in-out;
+          animation: heart 1.8s ease-in-out;
 }
 
 @-webkit-keyframes heart {
   0% {
     opacity: 0;
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
   }
   100% {
     opacity: 1;
@@ -713,8 +721,6 @@ main {
 @keyframes heart {
   0% {
     opacity: 0;
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
   }
   100% {
     opacity: 1;
@@ -722,36 +728,40 @@ main {
 }
 
 .menu_like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+}
+
+.menu_like .default_heart {
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 120%;
-  top: 45px;
 }
 
 .menu_like .default_icone {
-  color: #9d9d9d;
-  font-size: 24px;
-  left: 50%;
+  color: gray;
+}
+
+.menu_like .hover_heart {
+  position: relative;
 }
 
 .menu_like .hover_icone {
-  left: 0;
+  color: linear-gradient(#ff79da, #9356dc);
   opacity: 0;
-  position: absolute;
-  background: #9356dc;
 }
 
-.menu_like .hover_icone .hover_icone:hover {
-  -webkit-animation: heart 2s linear;
-          animation: heart 2s linear;
+.menu_like .hover_icone:hover {
+  -webkit-animation: heart 1.8s ease-in-out;
+          animation: heart 1.8s ease-in-out;
 }
 
 @keyframes heart {
   0% {
     opacity: 0;
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
   }
   100% {
     opacity: 1;

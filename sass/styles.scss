@@ -55,6 +55,7 @@ main{
         @include header_logo;
     }
 }
+
 /*Menu de navigation*/
 .header_navigation{
     @include header_navigation;
@@ -463,17 +464,18 @@ main{
 
     .information_box--option_list{
         @include info_list;
+        
     
         .option{
             @include option;
         }
         
-        .option:hover{
-            @include icone_footer ;
-        }
-
-        .icone{
-           @include icone;
-        }
+            &:hover{
+                @include icone_footer;
+                
+            }
+                .icone{
+                @include icone;
+                }
     }
 }

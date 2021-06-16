@@ -19,63 +19,44 @@
 /*Form page*/
 /*Order page*/
 /*Footer*/
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1204px) {
   .header_navigation .header_navigation_menu {
-    width: 40%;
-  }
-  .header_navigation_menu--list {
-    padding: 0;
-  }
-  .search_bar {
-    width: 50%;
-  }
-  #trending {
-    height: 45em;
-  }
-  #restaurants .restaurants_framing {
-    width: 85%;
-  }
-  .restaurant_card {
-    height: 33em;
-    width: 35vw;
-  }
-  #trending .card_img_1 {
-    height: 27em;
-  }
-  .restaurant_card .card_img_2 {
-    height: 27em;
-  }
-  .restaurant_card .card_img_3 {
-    height: 27em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header_navigation .header_navigation_menu {
-    width: 50%;
+    min-width: 50%;
   }
   .line_break {
     display: block;
+  }
+  #trending {
+    height: 72em;
+  }
+  #trending .trending_framing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #trending .card_img_1 {
+    height: 23.5em;
   }
   #restaurants .restaurants_framing {
     width: 95%;
   }
   .restaurant_card {
-    width: 45vw;
-    height: 29em;
+    width: 75vw;
+    height: 30em;
     margin-bottom: 30px;
-  }
-  #trending .card_img_1 {
-    height: 23.5em;
   }
   .restaurant_card .card_img_2 {
     height: 23.5em;
   }
   .restaurant_card .card_img_3 {
     height: 23.5em;
-  }
-  .menu_like {
-    margin-left: 120%;
   }
   #menu {
     display: -webkit-box;
@@ -89,21 +70,16 @@
   }
   .box_framing {
     padding: 0px 30px 0px 30px;
+    width: 95%;
   }
-  .starter_framing {
-    padding: 0px 30px 0px 30px;
+  .title_dish {
+    width: 82em;
   }
   .starter_box {
     width: 100%;
   }
-  .main_dish_framing {
-    padding: 0px 30px 0px 30px;
-  }
   .main_dish_box {
     width: 100%;
-  }
-  .dessert_framing {
-    padding: 0px 30px 0px 30px;
   }
   .dessert_box {
     width: 100%;
@@ -132,7 +108,19 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 868px) {
+  .header_navigation .header_navigation_menu {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .header_navigation .header_navigation_menu {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 470px) {
   body {
     margin: 0;
     width: 100%;
@@ -146,6 +134,9 @@
   .header_navigation .header_navigation_menu {
     width: 100%;
   }
+  .header_navigation .header_navigation_menu--list {
+    padding: 10px;
+  }
   img.logo {
     width: 350px;
     height: 70px;
@@ -156,6 +147,9 @@
   }
   #home_page_intro .home_page_intro_framing .introduction {
     font-size: 1.5em;
+  }
+  .order .button_order {
+    margin-right: 0;
   }
   .operation {
     width: 27em;
@@ -241,6 +235,10 @@
   .menu_like {
     margin: 0;
     top: 4em;
+    padding-left: 10px;
+  }
+  .box_framing {
+    padding-left: 10px;
   }
   .starter_framing {
     padding: 0px 10px 0px 10px;
@@ -251,8 +249,11 @@
   .dessert_framing {
     padding: 0px 10px 0px 10px;
   }
-  .order .button {
-    margin: 20px 0px 20px 0px;
+  .finish .button_finish {
+    margin-right: 0;
+  }
+  #form {
+    padding-bottom: 0;
   }
   #form .form_title {
     text-align: center;

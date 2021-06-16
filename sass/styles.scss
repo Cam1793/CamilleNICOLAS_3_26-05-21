@@ -27,6 +27,7 @@ main{
         }
     }
 }
+
 .loading_spinner{
         @include loading_spinner;
         
@@ -40,6 +41,7 @@ main{
             width: 80px;
         }
 }
+
 .loading_text{
     @include shrikhand;
     @include loading_text;
@@ -74,8 +76,8 @@ main{
                     @include header_navigation_menu--list--link;
                 }
 
-                    a.header_navigation_menu--list--link:hover{
-                        @include navigatoin_hover;     
+                    .header_navigation_menu--list--link:hover{
+                        @include navigatoin_hover;
                     }           
 }
 
@@ -112,7 +114,7 @@ main{
         @include intro_framing;
 
             .site_title{
-                @include title_site;
+                @include site_title;
             }
 
                 .introduction{
@@ -149,15 +151,15 @@ main{
         }
             .operation_number--choice--title{
                 @include operation_title;
-            }
-
-                .icone{
-                    @include icone;
+            }   
+                .operation_number--choice:hover{
+                    @include operation_hover;
                 }
-
-                    & :hover{
-                        @include operation_hover;
+                    .icone{
+                        @include icone;
                     }
+
+                    
 }
 
 //**barre de recherche**//
@@ -165,7 +167,7 @@ main{
     @include search_bar;
 
     .search_bar-input{
-        @include search_bar_input;
+       @include search_bar_input;
     }
 
         .fa-map-marker-alt{
@@ -274,7 +276,7 @@ main{
                     }
             
                         .hover_icone:hover{
-                            animation: heart 1.8s ease-in-out;
+                            animation: heart 1s ease-in-out;
                             
 
                             @keyframes heart {
@@ -309,7 +311,7 @@ main{
                     }
             
                         .hover_icone:hover{
-                            animation: heart 1.8s ease-in-out;
+                            animation: heart 1s ease-in-out;
                     
                             @keyframes heart {
                                 0%{
@@ -318,13 +320,18 @@ main{
                                 }
                                 100%{
                                     opacity: 1;
+                                    
                                 }
                             }
                         }
 }
 
 .title_dish{
-    @include dish_title;
+    @include title_dish;
+    
+    &:hover{
+        @include title_dish_hover;
+    }
 
     &--name{
         @include dish_name;
@@ -334,104 +341,29 @@ main{
             @include dish_ingredient;
         }
 }
-        
-.price{
-    @include price;
-
-    &:hover{
-        @keyframes check_box_price {
-            0% {
-              transform: translate(50px, 0);
-            }
-          
-            40% {
-              transform: translate(25px, 0);
-            }
-          
-            70% {
-              transform: translate(12px, 0);
-            }
-          
-            100% {
-              transform: translate(1px, 0);
-            }
-          }
-    }
-  
-    &_dish{
-        margin: 0;
-    }
-}
-
-.selec_dish{
-    @include selec_dish;
-
-    &:hover{
-
-        @keyframes selec_dish {
-            0% {
-              opacity: .5;
-              transform: translate(50px, 0);
-            }
-          
-            20% {
-              opacity: .6;
-              transform: translate(30px, 0);
-            }
-          
-            40% {
-              opacity: .7;
-              transform: translate(20px, 0);
-            }
-          
-            60% {
-              opacity: .8;
-              transform: translate(15px, 0);
-            }
-          
-            80% {
-              opacity: .9;
-              transform: translate(7px, 0);
-            }
-          
-            100% {
-              opacity: 1;
-              transform: translate(1px, 0);
-            }
-          }
-    }
-}
 
 .check_box_icone{
     @include check_box_icone;
 
-    &:hover{
-        @keyframes check_box_icone {
-            10% {
-            transform: rotate(-90deg);
+        &:hover{
+            @keyframes rotate {
+                to{
+                    transform: rotate(1turn);
+                }
             }
+        } 
+}
         
-            20% {
-            transform: rotate(-75deg) scale(1.03);
-            }
-        
-            40% {
-            transform: rotate(-60deg) scale(1.08);
-            }
-        
-            60% {
-            transform: rotate(-45deg) scale(1.15);
-            }
-        
-            80% {
-            transform: rotate(-30deg) scale(1.08);
-            }
-        
-            100% {
-            transform: rotate(5deg) scale(1);
-            }
-        }
-    } 
+.price{
+    @include price;
+
+    .price_dish{
+        @include price_dish;
+    }  
+}
+
+.selec_dish{
+    @include selec_dish;
 }
 
 .starter_box{

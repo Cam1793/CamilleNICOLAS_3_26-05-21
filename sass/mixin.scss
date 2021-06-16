@@ -119,6 +119,7 @@
 @mixin navigatoin_hover {
     position: relative;
     text-decoration: underline; 
+    cursor: pointer;
 }
 
 @mixin header_framing {
@@ -179,12 +180,13 @@
     flex-direction: column;
 }
 
-@mixin title_site {
+@mixin site_title {
     width: 100%;
     font-size: 4.5em;
     font-weight: normal;
     font-family: "shrikhand regular", sans-serif;
     text-align: center;
+    margin-top: 2em;
 }
 
 @mixin intro {
@@ -192,11 +194,12 @@
     font-size: 2em;
     font-weight: normal;
     text-align: center;
+    margin-top: 2em;
 }
 
 /*Bottons*/
 @mixin button_home_page {
-    padding: 2em;
+    margin: 4.5em;
 }
 
 @mixin button {
@@ -296,7 +299,7 @@
 @mixin search_bar {
     width: 25%;
     height: 3em;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -307,7 +310,7 @@
 }
 
 @mixin search_bar_input {
-    width: 200px;
+    width: 15em;
     height: 2em;
     background-color: transparent;
     border: none;
@@ -369,10 +372,10 @@
 }
 
 @mixin restaurants_framing {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 @mixin restaurants_link {
@@ -380,7 +383,7 @@
 }
 
 @mixin restaurant_card {
-    width: 25vw;
+    width: 35vw;
     height: 90%;
     border-radius: 15px;
     margin: 0em 1em 2.5em 0em;
@@ -454,7 +457,6 @@
 }
 
 /*Like home_page card*/
-
 @mixin home_page_like {
     display: flex;
     align-items: center;
@@ -487,13 +489,18 @@
     padding-left: 1em;
 }
 
-@mixin dish_title {
+@mixin title_dish {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 20px 10px 10px;
-    width: 100%;
+    width: 305px;
     overflow: hidden;
+}
+
+@mixin title_dish_hover {
+    transition: 800ms ease-in-out;
+    width: 250px;
 }
 
 @mixin dish_name {
@@ -515,34 +522,36 @@
 
 @mixin price {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     font-size: 18px;
-    padding: 10px;
-    animation: check_box_price ease .3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    min-width: 50px;
+    margin-right: -60px;
+}
+
+@mixin price_dish {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 39px;
+    margin-bottom: 0;
+    margin-right: 20px;
 }
 
 @mixin selec_dish {
-    animation: selec_dish ease .3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    background-color: $color-tertiary;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50px;
-    overflow: hidden;
-    transform-origin: 50% 50%;
+    background-color: $color-tertiary;
 }
 
 @mixin check_box_icone {
-    animation: check_box_icone ease .5s;
-    animation-iteration-count: 1;
-    background-color: $color-tertiary;
     color: $color-white;
-    position: absolute;
+    padding: 15px;
+    font-size: 25px;
+    animation: rotate 1.5s ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 @mixin box_hover {
@@ -557,9 +566,8 @@
 @mixin menu_box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 23vw;
     height: 80px;
+    width: 20vw;
     box-shadow: 5px 5px 10px #d3d1d1;
     border-radius: 20px;
     background-color: $color-white;
@@ -567,7 +575,6 @@
     cursor: pointer;
     margin-bottom: 30px;
     position: relative;
-    z-index: 1;
     overflow: hidden;
 
 }

@@ -43,7 +43,6 @@ main{
 }
 
 .loading_text{
-    @include shrikhand;
     @include loading_text;
 }
 
@@ -70,7 +69,9 @@ main{
         }
 
             a{
-                @include a;
+                text-decoration: none;
+                position: relative;
+                list-style-type: none;
             }
 
                 .header_navigation_menu--list--link{
@@ -439,7 +440,7 @@ main{
    @include order_conf;
 
         .order_confirmation--title{
-           @include  order_conf_title;
+            @include order_conf_title;
         }
 
             .order_confirmation--size{
@@ -455,7 +456,11 @@ main{
             @include information_logo;
         } 
             .information_title{
-                @include information_title;
+                color: $color-white ;
+                font-family: "shrikhand", sans-serif;
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-decoration: none;
             }
 }    
 
@@ -465,17 +470,25 @@ main{
     .information_box--option_list{
         @include info_list;
         
-    
         .option{
             @include option;
+            
         }
         
-            &:hover{
-                @include icone_footer;
-                
+            .option:hover{
+                @include icone_footer;    
             }
+
                 .icone{
                 @include icone;
                 }
+    }
+}
+
+a.contact_link{
+    @include contact_link;
+
+    &:hover{
+        @include icone_footer;
     }
 }

@@ -5,7 +5,6 @@
 /**mixin**/
 /***Body***/
 /***Main**/
-/*Police*/
 /*Loading spinner*/
 /*header*/
 /*Img header*/
@@ -22,7 +21,7 @@
 /*Footer*/
 /***CSS page de base***/
 body {
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: normal;
   margin: 0px;
@@ -147,11 +146,11 @@ main {
 }
 
 .loading_text {
-  font-family: "shrikhand regular", sans-serif;
   font-size: 3em;
   font-weight: normal;
   padding: 20px;
   color: #fff;
+  font-family: "shrikhand", sans-serif;
 }
 
 #header {
@@ -211,11 +210,12 @@ main {
 .header_navigation a {
   text-decoration: none;
   position: relative;
+  list-style-type: none;
 }
 
 .header_navigation .header_navigation_menu--list--link {
   list-style-type: none;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   color: #9356dc;
   position: relative;
 }
@@ -274,7 +274,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   font-size: 30px;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   position: relative;
   margin-top: 4em;
   width: 100%;
@@ -306,7 +306,7 @@ main {
   width: 100%;
   font-size: 4.5em;
   font-weight: normal;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   text-align: center;
   margin-top: 2em;
 }
@@ -470,7 +470,7 @@ main {
 }
 
 .search_bar .search_bar-input {
-  width: 10em;
+  width: 15em;
   height: 2em;
   background-color: transparent;
   border: none;
@@ -496,7 +496,7 @@ main {
   text-align: center;
   font-size: 2.5em;
   font-weight: normal;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
 }
 
 #trending .trending_framing {
@@ -556,7 +556,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-weight: normal;
   margin: 60px 0px 60px 0px;
 }
@@ -1117,7 +1117,7 @@ main {
 }
 
 #form .form_title {
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-size: 30px;
 }
 
@@ -1180,7 +1180,7 @@ main {
 }
 
 #order_confirmation .order_confirmation--title {
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-size: 2.5em;
   text-align: center;
 }
@@ -1188,6 +1188,7 @@ main {
 #order_confirmation .order_confirmation--size {
   text-align: center;
   font-size: 1.5em;
+  font-weight: normal;
 }
 
 #information {
@@ -1215,7 +1216,7 @@ main {
 
 #information .information_title {
   color: #fff;
-  font-family: "shrikhand regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-size: 3em;
   margin-bottom: 20px;
   text-decoration: none;
@@ -1252,6 +1253,7 @@ main {
   color: #fff;
   font-size: 1.5em;
   text-align: center;
+  cursor: pointer;
 }
 
 .information_box .information_box--option_list .option:hover {
@@ -1263,5 +1265,27 @@ main {
 .information_box .information_box--option_list .icone {
   margin-right: 10px;
   color: #9356dc;
+}
+
+a.contact_link {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
+a.contact_link:hover {
+  color: #ff79da;
+  -webkit-transition: opacity, 900ms;
+  transition: opacity, 900ms;
 }
 /*# sourceMappingURL=styles.css.map */

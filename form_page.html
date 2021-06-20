@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ohmyfood</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/media.css">
+        <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="logo/icone_onglet.png">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+        <body>
+            <!--Loading-spinner-->
+            <div class="loading">
+                <span class="loading_spinner"><img src="logo/icone_onglet.png" alt="logo" class="icone_onglet"></span>
+                <p class="loading_text">Chargement de la page...</p>
+            </div>
+
+            <!--Header-->
+            <header id="header">
+                <!--Bouton retour vers page d'accueil-->
+                <div class="header_framing">               
+                    <a href="home_page.html" class="back_to_home_page"><i class="fas fa-arrow-circle-left"></i></a>
+                    <!--Menu de navigation-->
+                    <div class="header_navigation">
+                        <nav class="header_navigation_menu">
+                            <ul class="header_navigation_menu--list">
+                                <li class="header_navigation_menu--list--link">Se connecter</li>
+                                <li class="header_navigation_menu--list--link">S'inscire</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--Logo-->
+                <div class="header_logo">
+                    <a href="index.html"><img src="logo/ohmyfood.png" alt="Logo du site" title="Ohmyfood" class="logo"></a>
+                </div>                  
+            </header>
+
+            <!--Main-->
+            <main>
+                 <!--Formulaire-->
+                <section id="form">
+                    <h1 class="form_title">Quelques informations supplémentaires :</h1>
+                        <div class="form_framing">
+                            <form method="POST" action="#">
+                                    <div class="form_fraiming--name">
+                                        <input type="text" class="form_text" placeholder="Nom"> 
+                                        <input type="text" class="form_text" placeholder="Prénom">
+                                    </div>
+                                    <div class="form_fraiming--adress">
+                                        <input type="text" class="form_text--adress" placeholder="Adresse">
+                                    </div>
+                                    <div class="form_fraiming--city">
+                                        <input type="text" class="form_text" placeholder="Code postal">
+                                        <input type="text" class="form_text" placeholder="Ville">
+                                    </div>
+                                    <div class="form_fraiming--phone">
+                                        <input type="tel" class="form_text" placeholder="Téléphone fixe">
+                                        <input type="tel" class="form_text" placeholder="Mobile">
+                                    </div>
+                                    <div class="form_fraiming--premium">
+                                        <input type="text" class="form_text" placeholder="Numéro premium (facultatif)">
+                                    </div>
+                            </form>
+                        </div>
+                </section>
+
+                <!--Bouton Validé-->
+                <section>
+                    <div class="finish">
+                        <button type="button" class="button_finish" onclick="window.location.href = 'order_page.html';">Validé</button>
+                    </div>
+                </section>
+            </main>
+
+            <!--Footer-->
+            <footer id="information">
+                <div class="information_logo">
+                    <a href="index.html" class="information_title">Ohmyfood</a>
+                </div>
+                <div class="information_box">
+                    <ul class="information_box--option_list">
+                        <li class="option"><i class="fas fa-utensils icone"></i>Proposer un restaurant</li>
+                        <li class="option"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</li>
+                        <li class="option">Montion légales</li>
+                        <li class="option"><a href="mailto:camille.nicolas93@gmail.com" class="contact_link">Contact</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <!--Footer-->
+        </body>
+</html>

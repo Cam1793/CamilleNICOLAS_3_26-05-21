@@ -1,0 +1,784 @@
+/**mixin**/
+
+/***Body***/
+@mixin body {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/***Main**/
+@mixin main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: "Roboto-Regular", sans-serif;
+}
+
+/*Loading spinner*/
+@mixin loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient( 60deg, $color-secondary, $color-primary);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    animation: disparition 2s ease-in;
+    animation-fill-mode: both;
+}
+
+@mixin loading_spinner {
+    display: flex;
+    justify-content: center;
+    border: solid 10px;
+    border-top-color: $color-primary;
+    border-bottom-color: $color-secondary ;
+    border-left-color: $color-tertiary;
+    border-right-color: $color-tertiary;
+    border-radius: 25%;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation: loading 1.5s ease-in-out infinite;
+
+}
+
+@mixin loading_text {
+    font-size: 3em;
+    font-weight: normal;
+    padding: 20px;
+    color: $color-white;
+    font-family: "shrikhand", sans-serif;
+}
+
+/*header*/
+@mixin header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    box-shadow: 0px 4px 10px 4px $box-shadow;
+    z-index: 1;
+}
+
+@mixin header_logo {
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+}
+
+@mixin header_navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+@mixin header_navigation_menu {
+    width: 30%;
+}
+
+@mixin header_navigation_menu--list {
+    font-size: 1.8em;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+@mixin a {
+    text-decoration: none;
+    position: relative;
+    list-style-type: none;
+}
+
+@mixin header_navigation_menu--list--link {
+    list-style-type: none;
+    font-family: "shrikhand", sans-serif;
+    color: $color-primary;
+    position: relative;
+}
+
+@mixin navigatoin_hover {
+    position: relative;
+    text-decoration: underline; 
+    cursor: pointer;
+}
+
+@mixin header_framing {
+    display: flex;
+    margin-top: 30px;
+}
+
+@mixin back_btn {
+    font-size: 3em;
+    color: $color-black;
+    margin-left: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@mixin back_btn--hover {
+    color:$color-tertiary;
+    transition: opacity, 300ms;
+}
+
+/*Img header*/
+@mixin card_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin img_picture {
+    height: 30em;
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin img_title_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "shrikhand", sans-serif;
+    position: relative;
+    margin-top: 4em;
+    width: 100%;
+    cursor: pointer;
+}
+
+/*Présentation et intro*/
+@mixin home_page_intro {
+    background: $color-grey-light;
+    width: 100%;
+}
+
+@mixin intro_framing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin site_title {
+    width: 100%;
+    font-size: 4.5em;
+    font-weight: normal;
+    font-family: "shrikhand", sans-serif;
+    text-align: center;
+    margin-top: 2em;
+}
+
+@mixin intro {
+    width: 100%;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 2em;
+}
+
+/*Bottons*/
+@mixin button_home_page {
+    margin: 4.5em;
+}
+
+@mixin button {
+    color: $color-primary;
+    border-radius: 2em;
+    border: solid 1px $color-primary;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 270px;
+    height: 60px;
+    box-shadow: 0px 7px 10px -6px $box-shadow;
+    margin-bottom: 40px;
+    text-align: center;
+    transition: transform 400ms ease-in-out;
+    position: relative;
+}
+
+@mixin button_hover {
+    transform: scale(1.09);
+    transition: transform 400ms ease-in-out;
+    opacity: 0.8;
+    background: linear-gradient($color-secondary, $color-primary);
+    transition-delay: 150ms;
+    box-shadow: 0px 7px 10px 0px $box-shadow;
+    color: $color-white ;
+    cursor: pointer;
+}
+
+@mixin movement_btn {
+    transform: scale(1.09);
+    transition: transform 400ms ease-in-out;
+    background: linear-gradient($color-secondary, $color-primary);
+    transition-delay: 100ms, 200ms;
+    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+    color: $color-white ;
+    cursor: pointer;
+}
+
+/*Operation*/
+@mixin operation_box_shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 4px 7px 4px $box-shadow;
+    z-index: 1
+}
+
+@mixin operation {
+    margin: 3em 0em 4em 0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35em;
+    position: relative;
+}
+
+@mixin operation_number {
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    width: 50px;
+    height: 45px;
+    margin-right: -0.8em;
+    background-color: $color-primary;
+    color: $color-white;
+    z-index: 2;
+}
+
+@mixin operation_choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: #eaeaea;
+    box-shadow: 0px 7px 10px -6px $box-shadow;
+}
+
+@mixin operation_title {
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+@mixin operation_hover {
+    background-color:#e4daf0;
+    transition: 0.4s ease-in-out;
+}
+
+/*Barre de recherche*/
+@mixin search_bar {
+    width: 25%;
+    height: 3em;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-grey-light;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 4px $box-shadow;
+}
+
+@mixin search_bar_input {
+    width: 15em;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+    color: $color-primary;
+    text-align: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+@mixin search_bar_icone {
+    color: $color-primary;
+    font-size: 1.3em;
+}
+
+/*Trending*/
+@mixin trending {
+    width: 100%;
+    margin: 50px;
+    background: $color-grey-light;
+}
+
+@mixin trending_title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: normal;
+    font-family: "shrikhand", sans-serif;
+}
+
+@mixin trending_framing {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin card_img_1{
+    width: 100%;
+    height: 325px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+}
+
+/*Restaurants*/
+@mixin restaurants {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px 50px 0px;
+}
+
+@mixin restaurants_title {
+    font-size: 4em;
+    text-align: center;
+    display: flex;
+    font-family: "shrikhand", sans-serif;
+    font-weight: normal;
+    margin: 60px 0px 60px 0px;
+}
+
+@mixin restaurants_framing {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin restaurants_link {
+    text-decoration: none;
+}
+
+@mixin restaurant_card {
+    width: 35vw;
+    height: 90%;
+    border-radius: 15px;
+    margin: 0em 1em 2.5em 0em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px #0000002e;
+    position: relative;
+    background: $color-white;
+    position: relative; 
+}
+
+@mixin restaurant_hover {
+    transform: scale(1.05);
+    transition: transform 400ms ease-in-out;
+}
+
+@mixin card_img {
+    width: 100%;
+    height: 315px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover; 
+}
+
+@mixin new {
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.7em;
+    font-weight: bold;
+    background-color: $color-tertiary;
+    color: $color-new;
+    padding-top: 10px;
+    text-align: center;
+    border: solid 1px $color-new;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px $color-tertiary;
+}
+
+@mixin card_text {
+    display: flex;
+    justify-content: space-between;
+    position: relative; 
+}
+
+@mixin restaurant_name {
+    margin: 10px;
+    padding: 0;
+    color: black;
+    font-size: 1.5em;
+}
+
+@mixin menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2em;
+    position: relative;
+    background-color: $color-grey-light;
+    padding: 50px 0px 50px 0px;
+}
+
+@mixin menu_name {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 10px;
+    padding: 0;
+    color: black;
+}
+
+/*Like home_page card*/
+@mixin home_page_like {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+@mixin default_heart {
+    position: absolute; 
+    
+}
+
+@mixin default_icone {
+    color: gray;
+}
+
+@mixin hover_heart {
+    position: relative; 
+    
+}
+
+@mixin hover_icone {
+    color: $color-heart;
+    opacity: 0;  
+}
+
+/*Like page menu*/
+@mixin menu_like {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+@mixin title_dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    width: 305px;
+    overflow: hidden;
+}
+
+@mixin title_dish_hover {
+    transition: 800ms ease-in-out;
+    width: 250px;
+}
+
+@mixin dish_name {
+    margin: 0;
+    font-size: 1.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin dish_ingredient {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin price {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: -60px;
+}
+
+@mixin price_dish {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 39px;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+@mixin selec_dish {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+}
+
+@mixin check_box_icone {
+    color: $color-white;
+    padding: 15px;
+    font-size: 25px;
+    animation: rotate 1.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@mixin box_hover {
+    transform: scale(1.03);
+    transition: transform 100ms ease;
+    background: transparent;
+    box-shadow: 0px 7px 10px 0px $box-shadow-darken;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+@mixin menu_box {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 20vw;
+    box-shadow: 5px 5px 10px #d3d1d1;
+    border-radius: 20px;
+    background-color: $color-white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+@mixin box_apparition_1 {
+    animation: apparition 2.5s cubic-bezier(1,.01,.68,.43);
+    animation-fill-mode: both;
+    transition-delay: 2s;
+
+    @keyframes apparition {
+        0%{
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        
+    }
+}
+
+@mixin box_apparition_2 {
+    animation: apparition 3s cubic-bezier(1,.01,.68,.43);
+    animation-fill-mode: both;
+    transition-delay: 2.5s;
+
+    @keyframes apparition {
+        0%{
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        
+    }
+}
+
+@mixin box_apparition_3 {
+    animation: apparition 3.5s cubic-bezier(1,.01,.68,.43);
+    animation-fill-mode: both;
+    transition-delay: 3s;
+
+    @keyframes apparition {
+        0%{
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        
+    }
+}
+
+@mixin order {
+    text-align: center; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+@mixin order_focus {
+    background: linear-gradient($color-primary , $color-tertiary);
+    color: $color-white;
+}
+
+/*Form page*/
+@mixin form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: $color-grey-light;
+    margin-bottom: 5em;
+    padding-bottom: 4em;
+}
+
+@mixin form_title {
+    font-family: "shrikhand", sans-serif;
+    font-size: 30px;
+}
+
+@mixin form_framing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@mixin form_text {
+    margin: 10px;
+    background-color: $color-white;
+    color: $color-primary;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    width: 15em;
+}
+
+@mixin form_adress {
+    margin: 10px;
+    background-color: $color-white;
+    color: $color-primary;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    width: 34em;
+}
+
+/*Order page*/
+
+@mixin order_conf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    background: $color-grey-light;
+}
+
+@mixin order_conf_title {
+    font-family: "shrikhand", sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+@mixin  order_conf_size {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight : normal;
+}
+
+/*Footer*/
+@mixin information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+}
+
+@mixin information_logo {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin information_title {
+    color: $color-white ;
+    font-family: "shrikhand", sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+@mixin info_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@mixin info_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin option {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: $color-white ;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin icone {
+    margin-right: 10px;
+    color: $color-primary;
+}
+
+@mixin icone_footer {
+    color: $color-secondary;
+    transition: opacity, 900ms;
+}
+
+@mixin contact_link {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: $color-white ;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+}

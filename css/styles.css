@@ -484,6 +484,7 @@ main {
 .search_bar .fa-map-marker-alt {
   color: #9356dc;
   font-size: 1.3em;
+  padding-left: 15px;
 }
 
 #trending {

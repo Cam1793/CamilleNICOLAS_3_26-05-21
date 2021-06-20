@@ -17,6 +17,10 @@
         display: block;
     }
 
+    .search_bar{
+        width: 40%;
+    }
+
     //**Home page**//
     #trending{
         height: 72em;
@@ -104,20 +108,21 @@
     }
 }
 
-
-@media screen and (max-width: 868px){
-    .header_navigation .header_navigation_menu{
-        width: 70%;
-    }
-}
-
 @media screen and (max-width: 868px){
     .header_navigation .header_navigation_menu{
         width: 90%;
     }
+
+    .search_bar .search_bar-input{
+        width: 100%
+    }
 }
 
-
+@media screen and (max-width: 615px){
+    .search_bar{
+        width: 45%;
+    }
+}
 
 @media screen and (max-width: 470px){
 

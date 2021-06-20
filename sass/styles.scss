@@ -173,7 +173,8 @@ main{
     }
 
         .fa-map-marker-alt{
-            @include search_bar_icone;
+            @include search_bar_icone
+            
         }
 }
 

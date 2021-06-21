@@ -403,7 +403,7 @@ main{
 }
 
 .finish{
-    @include order;
+    @include finish;
 
     .button_finish{
         @include button;

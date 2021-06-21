@@ -176,7 +176,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5em;
+  padding-bottom: 2.5em;
 }
 
 /*Menu de navigation*/
@@ -250,7 +250,6 @@ main {
 
 .card_img {
   width: 100%;
-  height: 315px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -276,9 +275,7 @@ main {
   font-size: 30px;
   font-family: "shrikhand", sans-serif;
   position: relative;
-  margin-top: 4em;
   width: 100%;
-  cursor: pointer;
 }
 
 /*Intro*/
@@ -308,7 +305,8 @@ main {
   font-weight: normal;
   font-family: "shrikhand", sans-serif;
   text-align: center;
-  margin-top: 2em;
+  margin: 0;
+  margin-top: 0.8em;
 }
 
 #home_page_intro .home_page_intro_framing .introduction {
@@ -376,8 +374,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  -webkit-box-shadow: 0px 4px 7px 4px #bdb6b6cb;
-          box-shadow: 0px 4px 7px 4px #bdb6b6cb;
+  -webkit-box-shadow: 0px 7px 7px 0px #bdb6b6cb;
+          box-shadow: 0px 7px 7px 0px #bdb6b6cb;
   z-index: 1;
 }
 
@@ -431,6 +429,32 @@ main {
   background-color: #eaeaea;
   -webkit-box-shadow: 0px 7px 10px -6px #bdb6b6cb;
           box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+}
+
+.operation .operation_number--choice--color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2em;
+  font-size: 1.2em;
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+          box-shadow: 0px 7px 10px -6px #bdb6b6cb;
+  background-color: #fff;
+}
+
+.operation .operation_number--choice--color:hover {
+  background-color: #e4daf0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .operation .operation_number--choice--title {
@@ -489,7 +513,7 @@ main {
 
 #trending {
   width: 100%;
-  margin: 50px;
+  margin-top: 50px;
   background: #eaeaea;
 }
 
@@ -559,7 +583,6 @@ main {
   display: flex;
   font-family: "shrikhand", sans-serif;
   font-weight: normal;
-  margin: 60px 0px 60px 0px;
 }
 
 #restaurants .restaurants_framing {
@@ -607,34 +630,34 @@ main {
 
 .restaurant_card .card_img {
   width: 100%;
-  height: 315px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 325px;
 }
 
 .restaurant_card .card_img_1 {
   width: 100%;
-  height: 315px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 325px;
 }
 
 .restaurant_card .card_img_2 {
   width: 100%;
-  height: 315px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 325px;
 }
 
 .restaurant_card .card_img_3 {
   width: 100%;
-  height: 315px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 325px;
 }
 
 .restaurant_card .new {
@@ -710,6 +733,7 @@ main {
 .home_page_like .hover_icone:hover {
   -webkit-animation: heart 1s ease-in-out;
           animation: heart 1s ease-in-out;
+  cursor: pointer;
 }
 
 @-webkit-keyframes heart {
@@ -760,6 +784,7 @@ main {
 .menu_like .hover_icone:hover {
   -webkit-animation: heart 1s ease-in-out;
           animation: heart 1s ease-in-out;
+  cursor: pointer;
 }
 
 @keyframes heart {
@@ -782,15 +807,15 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 20px 10px 10px;
-  width: 305px;
+  padding: 10px 0px 10px 10px;
+  width: 330px;
   overflow: hidden;
 }
 
 .title_dish:hover {
   -webkit-transition: 800ms ease-in-out;
   transition: 800ms ease-in-out;
-  width: 250px;
+  width: 270px;
 }
 
 .title_dish--name {
@@ -868,6 +893,11 @@ main {
       -ms-flex-align: center;
           align-items: center;
   background-color: #99e2d0;
+}
+
+.name_group {
+  -webkit-text-decoration: underline 3px #99e2d0;
+          text-decoration: underline 3px #99e2d0;
 }
 
 .starter_box {

@@ -51,7 +51,7 @@ main{
     @include header;
 
     .header_logo{
-        @include header_logo;
+        @include header_logo
     }
 }
 
@@ -105,7 +105,13 @@ main{
 }
 
 .img_title_header{
-    @include img_title_header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "shrikhand", sans-serif;
+    position: relative;
+    width: 100%;
 }
 
 /*Intro*/
@@ -139,7 +145,13 @@ main{
 
 //**Operation**//
 #operation_box_shadow{
-    @include operation_box_shadow; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 7px 7px 0px $box-shadow;
+    z-index: 1;
 }
 
 .operation{
@@ -151,17 +163,25 @@ main{
         .operation_number--choice{
             @include operation_choice;
         }
-            .operation_number--choice--title{
-                @include operation_title;
-            }   
-                .operation_number--choice:hover{
-                    @include operation_hover;
-                }
-                    .icone{
-                        @include icone;
-                    }
 
-                    
+        .operation_number--choice--color{
+            @include operation_choice;
+            background-color: $color-white;
+        }
+
+            .operation_number--choice--color:hover{
+                @include operation_hover;
+            }
+
+                .operation_number--choice--title{
+                    @include operation_title;
+                }   
+                    .operation_number--choice:hover{
+                        @include operation_hover;
+                    }
+                        .icone{
+                            @include icone;
+                        }                   
 }
 
 //**barre de recherche**//
@@ -225,18 +245,22 @@ main{
     
             .card_img{
                 @include card_img; 
+                height: 325px;
             }
 
                 .card_img_1{
                     @include card_img;
+                    height: 325px;
                 }
 
                     .card_img_2{
                         @include card_img;   
+                        height: 325px;
                     }
 
                         .card_img_3{
                             @include card_img;
+                            height: 325px;
                         }
                             .new{
                                 @include new;
@@ -280,6 +304,7 @@ main{
             
                         .hover_icone:hover{
                             animation: heart 1s ease-in-out;
+                            cursor: pointer;
                             
 
                             @keyframes heart {
@@ -315,6 +340,7 @@ main{
             
                         .hover_icone:hover{
                             animation: heart 1s ease-in-out;
+                            cursor: pointer;
                     
                             @keyframes heart {
                                 0%{
@@ -367,6 +393,10 @@ main{
 
 .selec_dish{
     @include selec_dish;
+}
+
+.name_group{
+    @include name_group;
 }
 
 .starter_box{

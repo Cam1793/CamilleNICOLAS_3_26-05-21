@@ -894,9 +894,19 @@ main {
   background-color: #99e2d0;
 }
 
-.name_group {
-  -webkit-text-decoration: underline 3px #99e2d0;
-          text-decoration: underline 3px #99e2d0;
+.name_group_1 {
+  width: 19%;
+  border-bottom: solid 3px #99e2d0;
+}
+
+.name_group_2 {
+  width: 13%;
+  border-bottom: solid 3px #99e2d0;
+}
+
+.name_group_3 {
+  width: 22%;
+  border-bottom: solid 3px #99e2d0;
 }
 
 .starter_box {

@@ -22,11 +22,17 @@
   .header_navigation .header_navigation_menu {
     min-width: 50%;
   }
-  .line_break {
-    display: block;
+  #header .header_logo {
+    padding-top: 1em;
+  }
+  #home_page_intro .home_page_intro_framing .site_title {
+    font-size: 3.5em;
   }
   .search_bar {
     width: 40%;
+  }
+  .btn_home_page {
+    margin: 1em;
   }
   #trending {
     height: 72em;
@@ -86,8 +92,24 @@
   .dessert_box {
     width: 100%;
   }
+  .order .button_order {
+    margin-right: 25px;
+  }
+  .finish .button_finish {
+    margin: 0;
+  }
+  #information {
+    padding-bottom: 0;
+  }
   #information .information_logo {
     font-size: 1.2em;
+  }
+  .information_box {
+    margin: 0;
+    padding: 0;
+  }
+  #information .information_title {
+    margin: 0;
   }
   .information_box .information_box--option_list {
     display: -webkit-box;
@@ -106,7 +128,7 @@
     font-size: 1.5em;
   }
   .option {
-    margin-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 
@@ -114,8 +136,14 @@
   .header_navigation .header_navigation_menu {
     width: 100%;
   }
+  .line_break {
+    display: block;
+  }
   .search_bar .search_bar-input {
     width: 100%;
+  }
+  .box_framing {
+    padding: 0px 0px 0px 12px;
   }
   .order {
     -webkit-box-orient: vertical;
@@ -149,8 +177,8 @@
     padding: 10px;
   }
   img.logo {
-    width: 350px;
-    height: 70px;
+    width: 330px;
+    height: 60px;
   }
   #home_page_intro .home_page_intro_framing .site_title {
     font-size: 3em;
@@ -164,7 +192,7 @@
   }
   .operation {
     width: 27em;
-    margin: 5em 0em 5em 0em;
+    margin: 3em 0em 2em 0em;
   }
   .operation .icone {
     margin: 0;
@@ -176,10 +204,12 @@
   }
   .operation .operation_number--choice {
     padding: 0;
-    font-size: 1em;
+    font-size: 0.9em;
   }
-  .operation .operation_number--choice--title {
-    margin: 20px 15px 20px 15px;
+  .operation .operation_number--choice--color {
+    background-color: #fff;
+    padding: 0;
+    font-size: 0.9em;
   }
   .search_bar {
     width: 80%;
@@ -242,6 +272,24 @@
   .img_title_header {
     text-align: center;
     font-size: 1.7em;
+    border-radius: 20px;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #operation_box_shadow {
+    background-color: #eaeaea;
+    z-index: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-top: -50px;
+    border-radius: 45px 45px 0 0;
+  }
+  #menu {
+    padding: 0;
   }
   .menu_like {
     margin: 0;
@@ -250,6 +298,12 @@
   }
   .box_framing {
     padding-left: 10px;
+  }
+  .title_dish--ingredient {
+    font-size: 1.2em;
+  }
+  .title_dish:hover {
+    width: 241px;
   }
   .starter_framing {
     padding: 0px 10px 0px 10px;
@@ -360,6 +414,23 @@
   }
   .information_box {
     margin: 0px;
+  }
+  .information_box .information_box--option_list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .menu_name {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu_name {
+    font-size: 1.3em;
   }
 }
 /*# sourceMappingURL=media.css.map */

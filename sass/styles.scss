@@ -394,8 +394,19 @@ main{
     @include selec_dish;
 }
 
-.name_group{
-    @include name_group;
+.name_group_1{
+    width: 19%;
+    border-bottom: solid 3px $color-tertiary;
+}
+
+.name_group_2{
+    width: 13%;
+    border-bottom: solid 3px $color-tertiary;
+}
+
+.name_group_3{
+    width: 22%;
+    border-bottom: solid 3px $color-tertiary;
 }
 
 .starter_box{

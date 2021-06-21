@@ -110,22 +110,27 @@
 
 @media screen and (max-width: 868px){
     .header_navigation .header_navigation_menu{
-        width: 90%;
+        width: 100%;
     }
 
     .search_bar .search_bar-input{
         width: 100%
     }
-}
 
-@media screen and (max-width: 615px){
-    .search_bar{
-        width: 45%;
+    .order{
+        flex-direction: column;
+    }
+
+    .order .button_order{
+        margin-right: 0;
+    }
+
+    .finish .button_finish{
+        margin-right: 20px;
     }
 }
 
-@media screen and (max-width: 470px){
-
+@media screen and (max-width: 603px){
 
     body{
         margin: 0;
@@ -331,17 +336,21 @@
        width: 20em;
    }
 
-   #form .form_text--adress{
+    #form .form_text--adress{
         width: 20em;
-   }
+    }
 
    //*Order page*//
-   #order_confirmation .order_confirmation--title{
-       font-size: 2em;
-   }
-   #order_confirmation .order_confirmation--size{
-       font-weight: normal;
-   }
+    #order_confirmation .order_confirmation--title{
+        font-size: 2em;
+    }
+    #order_confirmation .order_confirmation--size{
+        font-weight: normal;
+    }
+    
+    .finish{
+        flex-direction: column;
+    }
 
    .information_box{
        margin: 0px;

@@ -631,6 +631,8 @@
 }
 
 @mixin order {
+    display: flex;
+    align-items: center;
     text-align: center; 
     margin-top: 50px;
     margin-bottom: 50px;
@@ -640,6 +642,16 @@
 @mixin order_focus {
     background: linear-gradient($color-primary , $color-tertiary);
     color: $color-white;
+}
+
+@mixin finish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
 }
 
 /*Form page*/

@@ -190,8 +190,8 @@
   #home_page_intro .home_page_intro_framing .introduction {
     font-size: 1.5em;
   }
-  .order .button_order {
-    margin-right: 0;
+  .btn_home_page .button {
+    background-color: #fff;
   }
   .operation {
     width: 27em;
@@ -305,6 +305,9 @@
   .box_framing {
     padding-left: 10px;
   }
+  .title_dish--name {
+    font-size: 1.3em;
+  }
   .title_dish--ingredient {
     font-size: 1.2em;
   }
@@ -320,11 +323,11 @@
   .dessert_framing {
     padding: 0px 10px 0px 10px;
   }
-  .finish .button_finish {
-    margin-right: 0;
-  }
   .order {
     margin-bottom: 0;
+  }
+  .order .button_order {
+    background-color: #fff;
   }
   #form {
     padding-bottom: 0;
@@ -427,6 +430,8 @@
   .finish .button_finish {
     margin-top: 40px;
     margin-bottom: 30px;
+    margin-right: 0;
+    background-color: #fff;
   }
   .information_box {
     margin: 0px;

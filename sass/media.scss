@@ -211,8 +211,8 @@
         font-size: 1.5em;
     }
 
-    .order .button_order{
-        margin-right: 0;
+    .btn_home_page .button{
+        background-color: $color-white;
     }
 
     //*Home page*//
@@ -335,6 +335,10 @@
         padding-left: 10px;
     }
 
+    .title_dish--name{
+        font-size: 1.3em;
+    }
+
     .title_dish--ingredient{
         font-size: 1.2em;
     }
@@ -355,12 +359,12 @@
         padding: 0px 10px 0px 10px;
     }
 
-    .finish .button_finish{
-        margin-right: 0;
-    }
-
     .order{
         margin-bottom: 0;
+    }
+
+    .order .button_order{
+        background-color: $color-white;
     }
 
     //*Form page*//
@@ -435,6 +439,8 @@
     .finish .button_finish{
         margin-top: 40px;
         margin-bottom: 30px;
+        margin-right: 0;
+        background-color: $color-white;
     }
 
    .information_box{

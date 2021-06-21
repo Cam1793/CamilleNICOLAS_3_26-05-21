@@ -164,6 +164,9 @@
     margin: 0;
     width: 100%;
   }
+  #main_color {
+    background-color: #eaeaea;
+  }
   .loading_text {
     text-align: center;
   }
@@ -214,6 +217,9 @@
   .search_bar {
     width: 80%;
     margin-bottom: 50px;
+  }
+  #restaurants {
+    padding-bottom: 0;
   }
   #restaurants .restaurants_title {
     margin: 60px 0px 30px 0px;
@@ -317,8 +323,12 @@
   .finish .button_finish {
     margin-right: 0;
   }
+  .order {
+    margin-bottom: 0;
+  }
   #form {
     padding-bottom: 0;
+    margin-bottom: 0;
   }
   #form .form_title {
     text-align: center;
@@ -332,7 +342,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   #form .form_framing .form_fraiming--name {
     display: -webkit-box;
@@ -401,16 +411,22 @@
     width: 20em;
   }
   #order_confirmation .order_confirmation--title {
-    font-size: 2em;
+    font-size: 1.9em;
   }
   #order_confirmation .order_confirmation--size {
     font-weight: normal;
+    font-size: 1.4em;
   }
   .finish {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0;
+  }
+  .finish .button_finish {
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
   .information_box {
     margin: 0px;

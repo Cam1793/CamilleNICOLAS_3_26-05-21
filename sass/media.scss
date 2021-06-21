@@ -176,6 +176,10 @@
         width: 100%;
     }
 
+    #main_color{
+        background-color: $color-grey-light;
+    }
+
     //*Index.html*//
     .loading_text{
         text-align: center;
@@ -241,6 +245,10 @@
     .search_bar{
         width: 80%;
         margin-bottom: 50px;
+    }
+
+    #restaurants{
+        padding-bottom: 0;
     }
 
     #restaurants .restaurants_title{
@@ -351,9 +359,14 @@
         margin-right: 0;
     }
 
+    .order{
+        margin-bottom: 0;
+    }
+
     //*Form page*//
     #form{
         padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     #form .form_title {
@@ -364,7 +377,7 @@
     #form .form_framing{
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
     #form .form_framing .form_fraiming--name{
@@ -407,14 +420,21 @@
 
    //*Order page*//
     #order_confirmation .order_confirmation--title{
-        font-size: 2em;
+        font-size: 1.9em;
     }
     #order_confirmation .order_confirmation--size{
         font-weight: normal;
+        font-size: 1.4em;
     }
     
     .finish{
         flex-direction: column;
+        margin: 0;
+    }
+
+    .finish .button_finish{
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 
    .information_box{

@@ -166,7 +166,6 @@ main{
 
         .operation_number--choice--color{
             @include operation_choice;
-            background-color: $color-white;
         }
 
             .operation_number--choice--color:hover{

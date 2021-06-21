@@ -112,20 +112,26 @@
 
 @media screen and (max-width: 868px) {
   .header_navigation .header_navigation_menu {
-    width: 90%;
+    width: 100%;
   }
   .search_bar .search_bar-input {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 615px) {
-  .search_bar {
-    width: 45%;
+  .order {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .order .button_order {
+    margin-right: 0;
+  }
+  .finish .button_finish {
+    margin-right: 20px;
   }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 603px) {
   body {
     margin: 0;
     width: 100%;
@@ -345,6 +351,12 @@
   }
   #order_confirmation .order_confirmation--size {
     font-weight: normal;
+  }
+  .finish {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .information_box {
     margin: 0px;

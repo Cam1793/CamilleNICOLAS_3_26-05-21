@@ -180,8 +180,7 @@
     font-weight: normal;
     font-family: "shrikhand", sans-serif;
     text-align: center;
-    margin: 0;
-    margin-top: 0.8em
+    margin-top: 2em
 }
 
 @mixin intro {
@@ -210,8 +209,25 @@
     text-align: center;
     transition: transform 400ms ease-in-out;
     position: relative;
+    opacity: 0.8;
 }
 
+@mixin button_index {
+    color: $color-primary;
+    border-radius: 2em;
+    border: solid 1px $color-primary;
+    font-size: 1.7em;
+    font-weight: 600;
+    width: 300px;
+    height: 70px;
+    box-shadow: 0px 7px 10px -6px $box-shadow;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    text-align: center;
+    transition: transform 400ms ease-in-out;
+    position: relative;
+    opacity: 0.8;
+}
 @mixin button_hover {
     transform: scale(1.09);
     transition: transform 400ms ease-in-out;
@@ -240,7 +256,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    box-shadow: 0px 4px 7px 4px $box-shadow;
+    box-shadow: 0px 7px 7px 0px $box-shadow;
     z-index: 1;
 }
 

@@ -50,7 +50,7 @@
             align-items: center;
   }
   #trending .card_img_1 {
-    height: 23.5em;
+    height: 24em;
   }
   #restaurants .restaurants_framing {
     width: 95%;
@@ -60,11 +60,14 @@
     height: 30em;
     margin-bottom: 30px;
   }
+  .restaurant_card .card_img {
+    height: 315px;
+  }
   .restaurant_card .card_img_2 {
-    height: 23.5em;
+    height: 24em;
   }
   .restaurant_card .card_img_3 {
-    height: 23.5em;
+    height: 24em;
   }
   #menu {
     display: -webkit-box;
@@ -79,6 +82,15 @@
   .box_framing {
     padding: 0px 30px 0px 30px;
     width: 95%;
+  }
+  .name_group_1 {
+    width: 7.5%;
+  }
+  .name_group_2 {
+    width: 4.8%;
+  }
+  .name_group_3 {
+    width: 8.5%;
   }
   .title_dish {
     width: 82em;
@@ -96,7 +108,7 @@
     margin-right: 25px;
   }
   .finish .button_finish {
-    margin: 0;
+    margin-right: 20px;
   }
   #information {
     padding-bottom: 0;
@@ -144,6 +156,15 @@
   }
   .box_framing {
     padding: 0px 0px 0px 12px;
+  }
+  .name_group_1 {
+    width: 10%;
+  }
+  .name_group_2 {
+    width: 6.5%;
+  }
+  .name_group_3 {
+    width: 11.5%;
   }
   .order {
     -webkit-box-orient: vertical;
@@ -304,6 +325,15 @@
   }
   .box_framing {
     padding-left: 10px;
+  }
+  .name_group_1 {
+    width: 20%;
+  }
+  .name_group_2 {
+    width: 13%;
+  }
+  .name_group_3 {
+    width: 23%;
   }
   .title_dish--name {
     font-size: 1.3em;

@@ -116,20 +116,11 @@ main{
         @include intro_framing;
 
             .site_title{
-                width: 100%;
-    font-size: 4.5em;
-    font-weight: normal;
-    font-family: "shrikhand", sans-serif;
-    text-align: center;
-    margin-top: 2.6em
+                @include site_title;
             }
 
                 .introduction{
-                    width: 100%;
-                    font-size: 2em;
-                    font-weight: normal;
-                    text-align: center;
-                    margin-top: 2em;
+                    @include intro;
                 }
     }
 }
@@ -502,11 +493,7 @@ main{
             @include information_logo;
         } 
             .information_title{
-                color: $color-white ;
-                font-family: "shrikhand", sans-serif;
-                font-size: 3em;
-                margin-bottom: 20px;
-                text-decoration: none;
+                @include information_title;
             }
 }    
 

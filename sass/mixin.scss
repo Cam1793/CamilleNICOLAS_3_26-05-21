@@ -180,7 +180,7 @@
     font-weight: normal;
     font-family: "shrikhand", sans-serif;
     text-align: center;
-    margin-top: 2em
+    margin-top: 2.6em
 }
 
 @mixin intro {
@@ -228,6 +228,7 @@
     position: relative;
     opacity: 0.8;
 }
+
 @mixin button_hover {
     transform: scale(1.09);
     transition: transform 400ms ease-in-out;

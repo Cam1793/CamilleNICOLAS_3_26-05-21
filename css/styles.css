@@ -301,7 +301,7 @@ main {
 
 #home_page_intro .home_page_intro_framing .site_title {
   width: 100%;
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: normal;
   font-family: "shrikhand", sans-serif;
   text-align: center;
@@ -846,14 +846,14 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 0px 10px 10px;
-  width: 330px;
+  width: 365px;
   overflow: hidden;
 }
 
 .title_dish:hover {
   -webkit-transition: 800ms ease-in-out;
   transition: 800ms ease-in-out;
-  width: 270px;
+  width: 300px;
 }
 
 .title_dish--name {

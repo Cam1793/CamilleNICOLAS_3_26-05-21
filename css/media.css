@@ -206,7 +206,7 @@
   }
   #home_page_intro .home_page_intro_framing .site_title {
     font-size: 3em;
-    padding-top: 20px;
+    margin-top: 1em;
   }
   #home_page_intro .home_page_intro_framing .introduction {
     font-size: 1.5em;

@@ -351,16 +351,10 @@ main{
 }
 
 .title_dish{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 0px 10px 10px;
-    width: 367px;
-    overflow: hidden;
+    @include title_dish;
     
     &:hover{
-        transition: 800ms ease-in-out;
-    width: 300px;
+        @include title_dish_hover;
     }
 
     &--name{

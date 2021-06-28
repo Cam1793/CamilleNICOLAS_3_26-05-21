@@ -505,13 +505,13 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 0px 10px 10px;
-    width: 365px;
+    width: 367px;
     overflow: hidden;
 }
 
 @mixin title_dish_hover {
     transition: 800ms ease-in-out;
-    width: 300px;
+    width: 270px;
 }
 
 @mixin dish_name {

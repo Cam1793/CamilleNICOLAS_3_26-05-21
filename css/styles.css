@@ -853,7 +853,7 @@ main {
 .title_dish:hover {
   -webkit-transition: 800ms ease-in-out;
   transition: 800ms ease-in-out;
-  width: 300px;
+  width: 270px;
 }
 
 .title_dish--name {

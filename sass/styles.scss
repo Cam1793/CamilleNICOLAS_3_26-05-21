@@ -38,7 +38,7 @@ main{
         }
     
         .icone_onglet{
-            width: 80px;
+            @include icone_onglet;
         }
 }
 
@@ -50,41 +50,20 @@ main{
 #header{
     @include header;
 
-    .header_logo{
-        @include header_logo
-    }
-}
-
-/*Menu de navigation*/
-.header_navigation{
-    @include header_navigation;
-    
-    .header_navigation_menu{
-        @include header_navigation_menu;
+    .header_framing{
+        @include header_framing;
     }
 
-        .header_navigation_menu--list{
-            @include header_navigation_menu--list;
-            
+        .header_logo{
+            @include header_logo;
         }
-
-            a{
-                text-decoration: none;
-                position: relative;
-                list-style-type: none;
-            }
-
-                .header_navigation_menu--list--link{
-                    @include header_navigation_menu--list--link;
-                }
-
-                    .header_navigation_menu--list--link:hover{
-                        @include navigatoin_hover;
-                    }           
 }
 
-.header_framing{
-    @include header_framing;
+a{
+    text-decoration: none;
+    position: relative;
+    list-style-type: none;
+    color: #fff;
 }
 
 .back_to_home_page{
@@ -110,7 +89,7 @@ main{
 
 /*Intro*/
 #home_page_intro{
-   @include home_page_intro;
+    @include home_page_intro;
 
     .home_page_intro_framing{
         @include intro_framing;
@@ -125,20 +104,24 @@ main{
     }
 }
 /**button**/
-.btn_home_page{
+.btn{
     @include button_home_page;
 
     .button{
-        @include button;
-        
-        &:hover{
-            @include button_hover;
-        }
-    }
-
-    .button_index{
-        @include button_index;
-        
+        width: 270px;
+        height: 60px;
+        margin: 1em;
+        background: $background-color;
+        border-radius: 2em;
+        border: none;
+        font-size: 1.5em;
+        font-weight: 400;
+        box-shadow: 0px 7px 10px -6px $box-shadow;
+        margin-bottom: 40px;
+        text-align: center;
+        transition: transform 400ms ease-in-out;
+        position: relative;
+    
         &:hover{
             @include button_hover;
         }
@@ -165,7 +148,9 @@ main{
         }
 
             .operation_number--choice--color:hover{
-                @include operation_hover;
+                background-color:#e4daf0;
+                color: $color-primary;
+                transition: 0.4s ease-in-out;
             }
 
                 .operation_number--choice--title{
@@ -173,10 +158,12 @@ main{
                 }   
                     .operation_number--choice:hover{
                         @include operation_hover;
-                    }
-                        .icone{
-                            @include icone;
-                        }                   
+                    }      
+                    
+                        .icone_operation{
+                            color:$color-primary;
+                            font-size: 2em;
+                        }  
 }
 
 //**barre de recherche**//
@@ -184,13 +171,11 @@ main{
     @include search_bar;
 
     .search_bar-input{
-       @include search_bar_input;
+        @include search_bar_input;
     }
-
-        .fa-map-marker-alt{
-            @include search_bar_icone
-            
-        }
+}
+.icone_search_bar{
+    @include icone_search_bar; 
 }
 
 //**Restaurants / Menu **//
@@ -421,71 +406,6 @@ main{
     @include box_apparition_3;
 }
 
-//**Boutton Commander**//
-.order{
-    @include order;
-
-    .button_order{
-        @include button;
-        margin-right: 50px;
-
-        &:hover{
-            @include movement_btn;
-        }
-
-        &:focus{
-            @include order_focus;    
-        }
-    }
-}
-
-.finish{
-    @include finish;
-
-    .button_finish{
-        @include button;
-        margin-right: 50px;
-
-        &:hover{
-            @include movement_btn;
-        }
-    }
-}
-
-//**Page formulaire**//
-#form{
-    @include form;
-
-        .form_title{
-            @include form_title;
-        }
-
-            .form_framing{
-                @include form_framing;
-            }
-
-                .form_text{
-                    @include form_text
-                }
-
-                    .form_text--adress{
-                        @include form_adress;
-                    }
-}
-
-//**Confirmation de la commande**//
-#order_confirmation{
-   @include order_conf;
-
-        .order_confirmation--title{
-            @include order_conf_title;
-        }
-
-            .order_confirmation--size{
-                @include order_conf_size;
-            }
-}
-
 //**Footer**//
 #information{
     @include information;
@@ -505,24 +425,15 @@ main{
         @include info_list;
         
         .option{
-            @include option;
-            
+            @include option; 
         }
         
-            .option:hover{
-                @include icone_footer;    
-            }
-
-                .icone{
-                @include icone;
-                }
+            .icone_footer{
+                @include icone_footer;
+            }                
     }
 }
 
 a.contact_link{
     @include contact_link;
-
-    &:hover{
-        @include icone_footer;
-    }
 }

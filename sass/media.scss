@@ -22,27 +22,8 @@
         font-size: 3.5em;
     }
 
-    .search_bar{
-        width: 40%;
-    }
-
     .btn_home_page{
         margin: 1em;
-    }
-
-    //**Home page**//
-    #trending{
-        height: 72em;
-    }
-
-    #trending .trending_framing{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #trending .card_img_1{
-        height: 24em;
     }
 
     #restaurants .restaurants_framing{
@@ -107,22 +88,12 @@
         width: 100%;
     }
 
-    .order .button_order{
-        margin-right: 25px;
-    }
-
-    .finish .button_finish{
-        margin-right: 20px;
-    }
-
-
     //*Footer*//
-    #information{
-        padding-bottom: 0;
-    }
 
     #information .information_logo{
         font-size: 1.2em;
+        margin-left: 20px;
+        justify-content: flex-start;
     }
 
     .information_box{
@@ -143,10 +114,17 @@
 
     .information_box .information_box--option_list .option{
         font-size: 1.5em;
+        margin-left: 20px;
+        justify-content: flex-start;
     }
 
+    .information_box .information_box--option_list .contact_link{
+        font-size: 1em;
+        justify-content: flex-start;
+    }
     .option{
         padding-bottom: 10px;
+        
     }
 }
 
@@ -162,7 +140,7 @@
     }
 
     .search_bar .search_bar-input{
-        width: 100%
+        width: 30%
     }
 
     .box_framing{
@@ -207,7 +185,6 @@
         background-color: $color-grey-light;
     }
 
-    //*Index.html*//
     .loading_text{
         text-align: center;
     }
@@ -216,12 +193,8 @@
         width: 100%;
     }
 
-    .header_navigation .header_navigation_menu{
-        width: 100%;
-    }
-
-    .header_navigation .header_navigation_menu--list{
-        padding: 10px;
+    .search_bar .search_bar-input{
+        width: 50%
     }
 
     img.logo{
@@ -241,8 +214,6 @@
     .btn_home_page .button{
         background-color: $color-white;
     }
-
-    //*Home page*//
 
     .operation{
         width: 27em;
@@ -267,11 +238,6 @@
         background-color: $color-white;
         padding: 0;
         font-size: 0.9em;
-    }
-
-    .search_bar{
-        width: 80%;
-        margin-bottom: 50px;
     }
 
     #restaurants{
@@ -326,7 +292,7 @@
 
     //*Page menu*//
     .back_to_home_page{
-        margin: 0px 0px 0px 8px;
+        margin: 0px 0px 8px 8px;
         display: flex;
         align-items: center;
     }
@@ -383,7 +349,7 @@
     }
 
     .title_dish:hover{
-        width: 241px;
+        width: 225px;
     }
 
     .starter_framing{

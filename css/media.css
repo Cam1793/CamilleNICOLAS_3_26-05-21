@@ -23,7 +23,7 @@
     min-width: 50%;
   }
   #header .header_logo {
-    padding-top: 1em;
+    padding: 1.5em;
   }
   #home_page_intro .home_page_intro_framing .site_title {
     font-size: 3.5em;
@@ -111,7 +111,7 @@
     padding: 0;
   }
   .information_box .information_box--option_list .option {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-left: 20px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;

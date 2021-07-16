@@ -19,14 +19,11 @@
 /*Order page*/
 /*Footer*/
 @media screen and (max-width: 1204px) {
-  .header_navigation .header_navigation_menu {
-    min-width: 50%;
-  }
-  #header .header_logo {
-    padding: 1.5em;
-  }
   #home_page_intro .home_page_intro_framing .site_title {
     font-size: 3.5em;
+  }
+  .logo {
+    margin-left: 0;
   }
   .btn_home_page {
     margin: 1em;
@@ -48,6 +45,9 @@
   .restaurant_card .card_img_3 {
     height: 24em;
   }
+  .logo_media {
+    margin-left: 250px;
+  }
   #menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -63,13 +63,13 @@
     width: 95%;
   }
   .name_group_1 {
-    width: 7.5%;
+    width: 9.5%;
   }
   .name_group_2 {
-    width: 4.8%;
+    width: 6.5%;
   }
   .name_group_3 {
-    width: 8.5%;
+    width: 11%;
   }
   .title_dish {
     width: 82em;
@@ -84,8 +84,9 @@
     width: 100%;
   }
   #information .information_logo {
-    font-size: 1.2em;
+    font-size: 0.5em;
     margin-left: 20px;
+    margin-bottom: 10px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -129,6 +130,9 @@
 }
 
 @media screen and (max-width: 868px) {
+  .logo_media {
+    margin-left: 130px;
+  }
   .header_navigation .header_navigation_menu {
     width: 100%;
   }
@@ -142,22 +146,13 @@
     padding: 0px 0px 0px 12px;
   }
   .name_group_1 {
-    width: 10%;
+    width: 12.5%;
   }
   .name_group_2 {
-    width: 6.5%;
+    width: 8.5%;
   }
   .name_group_3 {
-    width: 11.5%;
-  }
-  .order {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .order .button_order {
-    margin-right: 0;
+    width: 14.5%;
   }
   .finish .button_finish {
     margin-right: 20px;
@@ -178,19 +173,26 @@
   #header {
     width: 100%;
   }
+  #header .header_framing {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
   .search_bar .search_bar-input {
     width: 50%;
   }
   img.logo {
-    width: 330px;
-    height: 60px;
+    width: 220px;
+    height: 40px;
   }
   #home_page_intro .home_page_intro_framing .site_title {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: 1em;
+    margin-bottom: 20px;
+    font-weight: 700;
   }
   #home_page_intro .home_page_intro_framing .introduction {
     font-size: 1.5em;
+    margin-top: 0;
   }
   .btn_home_page .button {
     background-color: #fff;
@@ -204,7 +206,7 @@
   }
   .operation .operation_number {
     width: 40px;
-    height: 45px;
+    height: 40px;
     padding: 0;
   }
   .operation .operation_number--choice {
@@ -273,6 +275,10 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .logo_media {
+    margin-left: 110px;
+    margin-top: -70px;
+  }
   .img_title_header {
     text-align: center;
     font-size: 1.7em;
@@ -295,6 +301,9 @@
   #menu {
     padding: 0;
   }
+  .menu_name {
+    font-size: 1.5em;
+  }
   .menu_like {
     margin: 0;
     top: 4em;
@@ -304,13 +313,13 @@
     padding-left: 10px;
   }
   .name_group_1 {
-    width: 20%;
+    width: 23%;
   }
   .name_group_2 {
-    width: 13%;
+    width: 16%;
   }
   .name_group_3 {
-    width: 23%;
+    width: 27%;
   }
   .title_dish--name {
     font-size: 1.3em;
@@ -330,116 +339,6 @@
   .dessert_framing {
     padding: 0px 10px 0px 10px;
   }
-  .order {
-    margin-bottom: 0;
-  }
-  .order .button_order {
-    background-color: #fff;
-  }
-  #form {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-  #form .form_title {
-    text-align: center;
-    font-size: 25px;
-  }
-  #form .form_framing {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 20px;
-  }
-  #form .form_framing .form_fraiming--name {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #form .form_framing .form_fraiming--adress {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #form .form_framing .form_fraiming--city {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #form .form_framing .form_fraiming--phone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #form .form_framing .form_fraiming--premium {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #form .form_text {
-    width: 20em;
-  }
-  #form .form_text--adress {
-    width: 20em;
-  }
-  #order_confirmation .order_confirmation--title {
-    font-size: 1.9em;
-  }
-  #order_confirmation .order_confirmation--size {
-    font-weight: normal;
-    font-size: 1.4em;
-  }
-  .finish {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-  }
-  .finish .button_finish {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    margin-right: 0;
-    background-color: #fff;
-  }
   .information_box {
     margin: 0px;
   }
@@ -452,13 +351,34 @@
 
 @media screen and (max-width: 411px) {
   .menu_name {
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+  .logo_media {
+    width: 250px;
+    margin-left: 80px;
+  }
+  .back_to_home_page {
+    padding: 0;
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 375px) {
   .menu_name {
-    font-size: 1.3em;
+    font-size: em;
+  }
+  .name_group_1 {
+    width: 26%;
+  }
+  .name_group_2 {
+    width: 17%;
+  }
+  .name_group_3 {
+    width: 28.5%;
+  }
+  .logo_media {
+    width: 250px;
+    margin-left: 70px;
   }
 }
 /*# sourceMappingURL=media.css.map */
